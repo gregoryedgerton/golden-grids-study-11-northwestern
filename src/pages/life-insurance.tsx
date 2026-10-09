@@ -4,7 +4,7 @@ import { Page } from "../lib/Page";
 import { useFontsReady } from "../lib/fonts";
 import { Squares } from "../bands/bands";
 import { Newsletter, Faq, Prose } from "../lib/modules";
-import { LIFE, SOURCE, STRIPS } from "../content";
+import { LIFE, SOURCE, STRIPS, DIBAND } from "../content";
 import { PROSE } from "../prose";
 import "../styles.css";
 
@@ -18,6 +18,7 @@ function App() {
       <Squares id="design" title={LIFE.design.title} lesson={LIFE.design.lesson} squares={LIFE.design.squares} variant={1} tone="sky" />
       <Squares id="why" kicker="Let's talk about it" title={LIFE.why.title} lesson={LIFE.why.lesson} squares={LIFE.why.squares} variant={5} from={3} strip={STRIPS.lifeWhy} />
       <Squares id="types" title={LIFE.types.title} lesson={LIFE.types.lesson} squares={LIFE.types.squares} variant={0} aside={{ href: "./whole-life.html#compare", label: "Compare our types of insurance" }} />
+      <Squares id="income" kicker={DIBAND.kicker} title={DIBAND.title} lesson={DIBAND.lesson} squares={DIBAND.squares} variant={5} from={3} strip={DIBAND.strip} />
       <Prose section={PROSE.lifeChoose} />
       <Newsletter />
       <Squares id="resources" title={LIFE.resources.title} squares={LIFE.resources.squares} variant={7} tone="sun" />

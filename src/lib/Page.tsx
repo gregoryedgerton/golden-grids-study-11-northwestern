@@ -26,7 +26,7 @@ export function Page({ current, crumbs, source, children }: { current: string; c
           <a className="wordmark" href={PAGES.H}><span className="wordmark__mark" aria-hidden="true">G</span><span className="wordmark__name">GIFcommit</span></a>
           <nav className="nav" aria-label="Primary">
             <ul>{NAV.map(([label, href]) => (
-              <li key={label}>{href === "#" ? <span className="nav__off" title="Not part of this study">{label}</span> : <a href={href} aria-current={href.endsWith(current) || (current === "term-life.html" || current === "whole-life.html" || current === "disability-calculator.html") && href.endsWith("life-insurance.html") ? "page" : undefined}>{label}</a>}</li>
+              <li key={label}>{href === "#" ? <span className="nav__off" title="Not part of this study">{label}</span> : <a href={href} aria-current={href.endsWith(current) || (current === "term-life.html" || current === "whole-life.html") && href.endsWith("life-insurance.html") ? "page" : undefined}>{label}</a>}</li>
             ))}</ul>
           </nav>
         </div>
