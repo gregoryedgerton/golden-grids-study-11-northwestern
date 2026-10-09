@@ -195,6 +195,16 @@ README: the smallest line, and that no screen-reader user has tested it.
   answers and the result, which is how the scan and captures reach it. Cells
   on this page use `box--open`: NO outlines, no fills ("don't go as heavy with
   grid lines", Greg); only the result card keeps a ground.
+- PHOTO CAPTIONS ARE MARKETING COPY, never a description of the picture
+  (Greg, 2026-10-08: "in any place where we are describing the image, don't";
+  "permission to be cheeky"). The description lives only in the alt text
+  (`src/photos.ts`). A `Pic` has a product name as `kicker`, a selling line as
+  `caption`, a paragraph as `long` and an `href`/`cta` to the product; the
+  opened photograph shows the paragraph and a button. Cheek is allowed in
+  these lines only; facts, statistics, lessons and prose stay plain.
+- The calculator is in the main nav ("Calculator"), has its own grid
+  (`DIBAND`) on the home and life insurance pages, and is reached by callout
+  cells (`CALLOUT.group`, `CALLOUT.risk`) from other grids.
 - The icons are the reference's own duotone drawings and interface glyphs,
   copied from its pages at Greg's request (`src/site-icons`,
   `captures/icons-scan.cjs`). Never its logo, its award badges (NerdWallet),

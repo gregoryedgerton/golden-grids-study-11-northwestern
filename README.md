@@ -143,6 +143,12 @@ one and a band of five or six is dealt into two stacked grids.
 | The cover you may need | from 2 to 5 · strip | The monthly figure with its share slider; cover against expenses as bars; a sentence; group cover; the strip is monthly income |
 | How long your savings would last | from 1 to 5 | Savings with and without individual cover as two lines, with a time slider; how long savings alone last; a note for the kind of work; earnings to 67; months |
 
+The calculator has its own item in the main navigation ("Calculator") and a
+grid of its own on the home and life insurance pages ("How much of your income
+is protected?", from 3 with a strip: 1 in 4, a photograph, 60%, 67 and the
+number of steps). Callout cells lead to it from the term life page's numbers,
+the guide's related articles and the advisor's resources.
+
 On this page the cells have no outlines and no fills. Only the result card
 keeps a ground and a rule, as the reference's does. Below 1100px the form, the
 sliders and the sentences stand above their grids at full width and the grids
@@ -165,6 +171,12 @@ Insurance Barometer, LIMRA's 2025 sales results, the Social Security
 Administration, Child Care Aware of America, the College Board, the National
 Association of Realtors, Brookings and NOLHGA. Callouts are those figures as
 large type.
+
+A photograph's caption never describes the picture; that is the alt text's
+job. The caption is a line of marketing copy for a product, with the product's
+name over it, and the opened photograph carries a paragraph and a button to
+that product. The author gave leave for these lines to be cheeky ("Fixed
+premium. Unfixed children."); the rest of the page keeps a plain register.
 
 Photographs are from [Unsplash](https://unsplash.com/) under the Unsplash
 License, chosen for young families and the usual buyers of term cover

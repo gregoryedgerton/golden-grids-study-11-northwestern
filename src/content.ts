@@ -25,7 +25,8 @@ export interface Fact {
   btn?: { label: string; href: string; variant?: "gold" | "blue" | "line" };
 }
 /** A photograph that fills a square; choosing it opens the picture whole, with a passage beside it. */
-export interface Pic { photo: number; kicker?: string; caption?: string; long?: string; pos?: string }
+/** The caption is marketing copy for a product, never a description of the picture (that is the alt text); `href` leads to the product. */
+export interface Pic { photo: number; kicker?: string; caption?: string; long?: string; pos?: string; href?: string; cta?: string }
 /** A short line that fills the strip a skipped range collapses into, or the smallest square when the range is not skipped. A link when it has an href. */
 export interface Strip { label?: string; strip: string; sub?: string; href?: string; tone?: Tone; icon?: IconName; source?: SourceKey }
 /** A cell that answers back: a small calculation the reader can change. */
@@ -46,7 +47,7 @@ export const SOURCE = {
   di: { label: "Disability insurance calculator", url: "https://www.northwesternmutual.com/disability-insurance/disability-insurance-calculator/" },
 };
 
-export const NAV: [string, string][] = [["About us", "#"], ["Financial planning", "#"], ["Insurance", "./life-insurance.html"], ["Investments", "#"], ["Life & Money", "./guide.html"]];
+export const NAV: [string, string][] = [["About us", "#"], ["Financial planning", "#"], ["Insurance", "./life-insurance.html"], ["Calculator", "./disability-calculator.html"], ["Investments", "#"], ["Life & Money", "./guide.html"]];
 export const UTILITY = ["Log in", "Claims"];
 export const FOOTER: [string, [string, string][]][] = [
   ["Insurance", [["Life insurance", "./life-insurance.html"], ["Term life", "./term-life.html"], ["Whole life", "./whole-life.html"], ["Life Insurance Guide", "./guide.html"], ["Disability income calculator", "./disability-calculator.html"]]],
@@ -59,6 +60,37 @@ const H = "./index.html", L = "./life-insurance.html", T = "./term-life.html", W
 const D = "./disability-calculator.html";
 export const PAGES = { H, L, T, W, G, A, D };
 
+// --- The disability income calculator, as callouts and as a grid of its own ---------
+
+/** Callout cells that lead to the calculator: a statistic as large type, a sentence and a button. */
+export const CALLOUT = {
+  group: { label: "Disability income calculator", line: "60%", fitClass: "fit--display fit--num", tone: "navy", icon: "briefcase",
+    body: "of pay is what an employer's group plan usually replaces. Work out what you would need on top, in three steps.",
+    btn: { label: "Calculate it", href: D, variant: "gold" as const } } as Fact,
+  risk: { label: "Disability income calculator", line: "1 in 4", fitClass: "fit--display fit--num", tone: "sky", icon: "umbrella", source: "ssa",
+    body: "of today's 20-year-olds will become disabled before 67. See how long your savings would carry your household.",
+    btn: { label: "Calculate it", href: D, variant: "blue" as const } } as Fact,
+};
+
+export const DIBAND = {
+  kicker: "Calculator",
+  title: "How much of your income is protected?",
+  lesson: "A death is not the likeliest way for a young family to lose an income. The disability income calculator takes three short steps and gives a figure you can change.",
+  squares: [
+    { label: "Disability income calculator", line: "1 in 4", fitClass: "fit--display fit--num", tone: "navy", icon: "umbrella", source: "ssa",
+      body: "of today's 20-year-olds will become disabled and qualify for Social Security disabled-worker benefits before 67. Enter your age, your income and your expenses, and see what cover would keep the household running.",
+      btn: { label: "Calculate it", href: D, variant: "gold" as const } },
+    { photo: 53, kicker: "Disability income", caption: "Your paycheck called. It wants a bodyguard.", href: D, cta: "Calculate it",
+      long: "Disability income insurance pays a monthly benefit while an illness or an injury keeps you from working. It protects the earnings still ahead, which for most young households are worth more than everything they own." },
+    { label: "Usual group cover", line: "60%", fitClass: "fit--display fit--num", tone: "sky", icon: "briefcase",
+      body: "of pay is what an employer's plan typically replaces, and it usually ends with the job.",
+      long: "The benefit is generally taxable when the employer pays the premium, so the amount that arrives is smaller still. Individual cover is bought to close the gap.", href: D, cta: "See your gap" },
+    { label: "Retirement age assumed", line: "67", fitClass: "fit--display fit--num", tone: "paper", icon: "calendar",
+      body: "The calculator counts the working years, and the earnings, still ahead of you.", href: D, cta: "Count yours" },
+  ] as Sq[],
+  strip: { label: "Steps", strip: "3", sub: "then a result you can change", href: D, tone: "sun", icon: "check" } as Strip,
+};
+
 // --- Home ----------------------------------------------------------------------
 
 export const HOME = {
@@ -67,9 +99,9 @@ export const HOME = {
       body: "See how the right advisor and the right policy fit a young family's life, from the first night at home to the last mortgage payment.",
       long: "A young family's money is mostly in the future: wages not yet earned, a mortgage not yet paid, schooling not yet bought. Life insurance is the one product that turns those years into a sum if the earner is gone. The conversation starts with what you want to protect, then works out how much and for how long.",
       btn: { label: "Let's get started", href: A, variant: "gold" as const } },
-    { photo: 9, kicker: "Home", caption: "The people the plan is for",
+    { photo: 9, kicker: "Term life", caption: "Bedtime is non-negotiable. So is their future.", href: T, cta: "See term life",
       long: "Every figure in a plan starts with a household: who lives in it, who earns, who depends on whom. Cover is sized to that household, and it is revisited when it changes." },
-    { photo: 7, kicker: "Family", caption: "Someone is counting on you",
+    { photo: 7, kicker: "Term life", caption: "He thinks you're invincible. Have a backup plan.", href: T, cta: "See term life",
       long: "A child's needs are long and predictable: food, shelter, schooling, care. Term life insurance is priced for exactly that horizon, a fixed number of years in which the cost of losing an income is greatest." },
     { label: "One paycheck away", line: "47%", fitClass: "fit--display fit--num", tone: "sun", icon: "clock", source: "baro25",
         body: "of Americans say their household would feel a financial impact within six months if a primary wage earner died.",
@@ -98,7 +130,7 @@ export const HOME = {
     title: "Your advisor is here to guide you",
     lesson: "What a client can expect from an advisor: a range of solutions, a hearing without judgement, and a company that stands behind the advice.",
     squares: [
-      { photo: 207, kicker: "Planning", caption: "A conversation before a product",
+      { photo: 207, kicker: "Financial planning", caption: "Date night, but make it a spreadsheet.", href: A, cta: "Meet an advisor",
         long: "The first meeting is questions, not recommendations: what the household spends, what it owes, who depends on whom, and what would have to be true for the next twenty years to go well." },
       { label: "Expertise", line: "Every stage of life", tone: "sun", icon: "family",
         body: "A range of solutions for a first apartment, a first child, a promotion, a move and a retirement.",
@@ -119,7 +151,7 @@ export const HOME = {
       { label: "One", line: "Better conversations", tone: "paper", icon: "mail",
         body: "Your advisor meets you where you are, asks deeper questions and listens closely to your goals, priorities and attitude to money.",
         long: "The blind spots are usually in what is not asked: the co-signed loan, the parent who may need help, the job benefit that ends when the job does. Good questions find them before a claim does." },
-      { photo: 295, kicker: "At the table", caption: "A plan on paper",
+      { photo: 295, kicker: "Financial planning", caption: "A plan on paper beats a plan in the shower.", href: A, cta: "Meet an advisor",
         long: "Plans are written down because decisions made at a kitchen table are easy to forget. A one-page statement of goals, amounts and dates is what the review each year is measured against." },
       { label: "Two", line: "Better solutions", tone: "sun", icon: "key",
         body: "Each recommendation is fitted to your stage of life and names the gap it closes, from cover that is too small to a policy that expires too soon.",
@@ -142,8 +174,8 @@ export const HOME = {
       { label: "Own a policy", line: "52%", fitClass: "fit--display fit--num", tone: "sky", icon: "shield", source: "baro26",
         body: "of U.S. adults say they have life insurance, through work or on their own.",
         long: "Ownership is about the same as the share who say life insurance is what a household would rely on if its main earner died, second only to savings." },
-      { label: "Disabled before 67", line: "1 in 4", fitClass: "fit--display fit--num", tone: "paper", icon: "umbrella", source: "ssa",
-        body: "of today's 20-year-olds will become disabled and qualify for Social Security disabled-worker benefits before 67." },
+      { label: "Guess, not know", line: "49%", fitClass: "fit--display fit--num", tone: "paper", icon: "document", source: "baro25",
+        body: "say their estimate of what cover would cost was a gut feeling or a wild guess." },
     ] as Sq[],
   },
 
@@ -181,8 +213,8 @@ export const HOME = {
     squares: [
       { label: "Ready?", line: "Ready to feel easier about the future?", fitClass: "fit--display", tone: "navy",
         body: "It's easy to get started: no commitment, just a better conversation.", btn: { label: "Find a financial advisor", href: A, variant: "gold" as const } },
-      { photo: 20, kicker: "Together", caption: "Starting out" },
-      { photo: 15, kicker: "Together", caption: "Out in the sun" },
+      { photo: 20, kicker: "Term life", caption: "Up she goes. Down goes the worry.", href: T, cta: "See term life", long: "Term cover is the safety net under the fun part. Pick a length, pick an amount, and get back to the fun part." },
+      { photo: 15, kicker: "Whole life", caption: "Sunny today. Covered for the rest.", href: W, cta: "See whole life", long: "Whole life cover does not expire, which is more than can be said for the weather. Lifelong protection, with a cash value that builds while you get on with things." },
     ] as Sq[],
   },
 };
@@ -195,9 +227,9 @@ export const LIFE = {
       body: "You've worked to build a life with the people you love. Choosing the type and the amount of cover should be made plain, not left to guesswork.",
       long: "A life insurance policy is a contract: you pay a premium, and when you die the insurer pays a stated sum to the people you named. Everything else, the types, the riders, the cash value, is a variation on how long the contract lasts and what it does along the way.",
       btn: { label: "Get insurance", href: A, variant: "gold" as const } },
-    { photo: 17, kicker: "New parents", caption: "The first weeks",
+    { photo: 17, kicker: "Life insurance", caption: "New baby, new math. We'll do the math.", href: `${T}#calculator`, cta: "Calculate it",
       long: "Most first-time buyers come to life insurance within a year of a birth, a marriage or a mortgage. Those are the three events that create a person who depends on your income." },
-    { photo: 82, kicker: "Family", caption: "The long walk",
+    { photo: 82, kicker: "Term life", caption: "Twenty years go fast. Cover all of them.", href: T, cta: "See term life",
       long: "A family's financial life runs for decades. The policy is meant to cover the stretch in which the household could not manage on one income, and no more than that." },
   ] as Sq[],
 
@@ -210,7 +242,7 @@ export const LIFE = {
         long: "The first is term insurance: inexpensive, temporary, and aimed at the years of greatest dependence. The second is permanent insurance, whose cash value can later help pay for college, grow a business or add to retirement income." },
       { label: "Calculator", line: "How much life insurance is right for you?", tone: "navy", icon: "chart",
         body: "Add up what your family would need to carry on, subtract what they already have.", btn: { label: "Calculate it", href: `${T}#calculator`, variant: "line" as const } },
-      { photo: 126, kicker: "Living room", caption: "What the cover is for",
+      { photo: 126, kicker: "Life insurance calculator", caption: "Ten minutes now. Decades of not wondering.", href: `${T}#calculator`, cta: "Calculate it",
         long: "The calculator is arithmetic, not forecasting: debts, years of income, a mortgage and the cost of schooling, less savings and cover already in place." },
     ] as Sq[],
   },
@@ -250,9 +282,9 @@ export const LIFE = {
       { label: "Permanent", line: "Variable universal", tone: "blush", icon: "chart",
         body: "Lifelong cover whose cash value you invest in market subaccounts, with the chance of more growth and the risk of less.",
         long: "The cash value can fall as well as rise, and so can the cover it supports. It is for buyers who want the investment choice and accept the risk." },
-      { photo: 150, kicker: "At home", caption: "Cover that lasts",
+      { photo: 150, kicker: "Whole life", caption: "Some things you keep forever. This is one.", href: W, cta: "See whole life",
         long: "Which kind is right depends on whether the need is temporary, as for a young family, or lasting, as for a dependent who will never be able to support themselves." },
-      { photo: 53, kicker: "Father", caption: "For the years that matter most",
+      { photo: 53, kicker: "Term life", caption: "Big cover, small premium, zero drama.", href: T, cta: "See term life",
         long: "Most buyers under forty start with term cover sized to their obligations and revisit permanent cover when the household's finances are more settled." },
     ] as Sq[],
   },
@@ -282,8 +314,8 @@ export const LIFE = {
     squares: [
       { label: "Quote", line: "Now you're ready for a life insurance quote", fitClass: "fit--display", tone: "navy",
         body: "Your advisor will ask deeper questions to find the right type, and amount, for your goals and budget.", btn: { label: "Let's talk", href: A, variant: "gold" as const } },
-      { photo: 12, kicker: "Together", caption: "What it is for" },
-      { photo: 1, kicker: "Together", caption: "On his shoulders" },
+      { photo: 12, kicker: "Life insurance", caption: "She won't remember this. Your policy will.", href: A, cta: "Talk to an advisor", long: "The point of a policy is that the people you love never have to think about it. An advisor finds the type and the amount; you supply the reasons." },
+      { photo: 1, kicker: "Term life", caption: "Carry them now. Cover them for later.", href: T, cta: "See term life", long: "Term cover is built for exactly these years, the ones with small shoes by the door: a level premium, a fixed term and a conversion option for when life changes." },
     ] as Sq[],
   },
 };
@@ -296,9 +328,9 @@ export const TERM = {
       body: "One of the most affordable kinds of life insurance, built to protect your loved ones for a set number of years. Find out how much cover you will need.",
       long: "Term insurance is rented protection: you pay only for the years in which your family depends on you. That is why it costs far less than permanent cover for the same amount, and why it is the usual first policy for a household with a mortgage and young children.",
       btn: { label: "Get insurance", href: A, variant: "gold" as const } },
-    { photo: 52, kicker: "Father and daughter", caption: "Those who depend on you",
+    { photo: 52, kicker: "Term life", caption: "She has plans for you. Cover the next twenty years of them.", href: "#calculator", cta: "Calculate it",
       long: "The years in which a young child depends on you are known in advance: roughly eighteen to twenty-two. A twenty-year term is chosen to span them." },
-    { photo: 266, kicker: "A walk by the lake", caption: "Years that matter most" },
+    { photo: 266, kicker: "Level term", caption: "Fixed premium. Unfixed children.", href: "#kinds", cta: "See the kinds", long: "A level term keeps the premium exactly where it started for the whole term. The children, meanwhile, will change shoe size every four months." },
   { label: "Cost of cover", line: "$192", fitClass: "fit--display fit--num", tone: "sun", icon: "cup", source: "baro25",
       body: "a year is the accepted median cost of a $250,000, 20-year level term policy for a healthy man under 31, about $16 a month.",
       long: "Young adults guess about ten times that. A level term keeps the premium the same for the whole term, so the price is set while you are young and healthy." },
@@ -311,7 +343,7 @@ export const TERM = {
       { label: "The mortgage gets paid", line: "40", fitClass: "fit--display fit--num", tone: "sun", icon: "house", source: "nar",
         body: "is the median age of a first-time homebuyer, a record. A thirty-year mortgage taken at 40 runs to age 70.",
         long: "A death benefit equal to the outstanding mortgage lets the surviving parent stay in the house. If the borrower with the larger income dies, the remaining income may not cover the payment; a term policy for the length of the mortgage closes the gap." },
-      { photo: 139, kicker: "First home", caption: "A mortgage, a move, a new start",
+      { photo: 139, kicker: "Term life", caption: "You got the keys. Now cover the mortgage.", href: "#calculator", cta: "Calculate it",
         long: "Buying a home is the most common reason to buy life insurance for the first time, and the lender often asks about it." },
       { label: "Children can still go to college", line: "$11,950", fitClass: "fit--display fit--num", tone: "paper", icon: "graduation", source: "collegeboard",
         body: "a year in tuition and fees at the average public four-year college for an in-state student in 2025–26, before room and board.",
@@ -362,7 +394,7 @@ export const TERM = {
         long: "It adjusts USDA's estimate for a child born in 2015 for inflation. A death benefit is sized in part to the years of spending still ahead." },
       { label: "Disabled before 67", line: "1 in 4", fitClass: "fit--display fit--num", tone: "sun", icon: "umbrella", source: "ssa",
         body: "of today's 20-year-olds will become disabled and qualify for Social Security disabled-worker benefits before reaching 67.",
-        href: D, cta: "Income calculator",
+        btn: { label: "Calculate it", href: D, variant: "blue" as const },
         long: "Disability, not death, is the likelier way for a young family to lose an income, which is why the two kinds of cover are usually discussed together." },
       { label: "Rule of thumb", line: "10×", fitClass: "fit--display fit--num", tone: "paper", icon: "chart",
         body: "annual income is the usual first estimate of the cover to buy. Add the mortgage, other debts and schooling for a better figure.",
@@ -406,8 +438,8 @@ export const TERM = {
     squares: [
       { label: "Next step", line: "Ready to take the next step?", fitClass: "fit--display", tone: "navy",
         body: "Our advisors will help you find the right amount of term cover for your goals and budget.", btn: { label: "Let's talk", href: A, variant: "gold" as const } },
-      { photo: 7, kicker: "Together", caption: "The reason" },
-      { photo: 57, kicker: "Together", caption: "And the years ahead" },
+      { photo: 7, kicker: "Term life", caption: "This is the whole pitch.", href: A, cta: "Let's talk", long: "No chart explains it better. Term cover makes sure the mortgage, the schooling and the everyday bills are paid if you are not there to pay them." },
+      { photo: 57, kicker: "Term conversion", caption: "Start with term. Trade up when you're ready.", href: W, cta: "See whole life", long: "Most term policies can be converted to permanent cover without a new medical exam. Start with what the household needs now and keep the door open." },
     ] as Sq[],
   },
 };
@@ -420,9 +452,9 @@ export const WHOLE = {
       body: "Do more of the things you love, with the people you love. This cover lasts your entire life and has benefits you can use along the way.",
       long: "Whole life is permanent insurance in its plainest form: a level premium, a guaranteed death benefit that is paid whenever you die, and a cash value that grows on a schedule written into the policy.",
       btn: { label: "Get insurance", href: A, variant: "gold" as const } },
-    { photo: 127, kicker: "Generations", caption: "A family across generations",
+    { photo: 127, kicker: "Whole life", caption: "Grandkids are expensive. Plan accordingly.", href: A, cta: "Talk to an advisor",
       long: "A policy that lasts for life is for needs that last for life: an estate, a dependent who will never be self-supporting, or a bequest that the owner wants to be certain of." },
-    { photo: 75, kicker: "On foot", caption: "A family on the move" },
+    { photo: 75, kicker: "Whole life", caption: "No expiry date. Unlike the hiking boots.", href: "#compare", cta: "Compare with term", long: "Whole life cover lasts as long as you do, with a premium that never rises and a cash value that is guaranteed to grow. Everything else in the cupboard wears out." },
   ] as Sq[],
 
   what: {
@@ -448,7 +480,7 @@ export const WHOLE = {
       { label: "Guaranteed payout", line: "Your family will be paid", fitClass: "fit--display", tone: "sky", icon: "shield",
         body: "The death benefit is guaranteed for life, so the people you named can count on it however long you live.",
         long: "That certainty is the product. It matters most to households that plan to leave something specific, a bequest, a business share or the care of a dependent." },
-      { photo: 20, kicker: "Together", caption: "The certainty is the point" },
+      { photo: 20, kicker: "Guaranteed payout", caption: "The one sure thing, besides nap resistance.", href: A, cta: "Talk to an advisor", long: "The death benefit is guaranteed for life, so the people you named can count on it however long you live. Certainty is the product." },
       { label: "Costs are set", line: "The premium never rises", tone: "sun", icon: "lock",
         body: "What you pay is set by your age, health and the amount at purchase, and does not increase for as long as you hold the policy.",
         long: "A fixed premium is higher than a term premium at the start and lower than any term premium you could buy at seventy, which is the trade the buyer is making." },
@@ -513,12 +545,12 @@ export const WHOLE = {
       { label: "The usual order", line: "Term first, for most", fitClass: "fit--display", tone: "sky", icon: "calendar",
         body: "When income is modest and obligations are large, term cover buys the most protection for the money.",
         long: "The same premium that buys a large term policy buys a small whole life policy. For a family whose chief risk is losing an income during the next twenty years, the larger amount is usually the better protection." },
-      { photo: 9, kicker: "At home", caption: "Cover first",
+      { photo: 9, kicker: "Term first", caption: "Cover first. Clever later.", href: T, cta: "See term life",
         long: "A policy that is too small to replace an income does not protect the household, however long it lasts." },
       { label: "Later", line: "Permanent when needs are lasting", tone: "sun", icon: "house",
         body: "Whole life becomes a sound addition when the household has taken care of the near term and wants something that does not expire.",
         long: "That is usually a larger income, a settled home and a need that has no end date: an estate, a business, a dependent child." },
-      { photo: 25, kicker: "Two babies", caption: "Starting simple",
+      { photo: 25, kicker: "Term conversion", caption: "Two under two? Start simple.", href: T, cta: "See term life",
         long: "Conversion rights in a term policy let a family move to permanent cover later at its original health class, so starting with term does not close the door." },
     ] as Sq[],
   },
@@ -555,8 +587,8 @@ export const WHOLE = {
     squares: [
       { label: "Next step", line: "Now you're ready for the best life insurance option for you", fitClass: "fit--display", tone: "navy",
         body: "Your advisor will ask deeper questions to find the right amount of whole life cover for your goals and budget.", btn: { label: "Let's talk", href: A, variant: "gold" as const } },
-      { photo: 76, kicker: "Together", caption: "Along the boardwalk" },
-      { photo: 127, kicker: "Together", caption: "Across generations" },
+      { photo: 76, kicker: "Whole life", caption: "A long walk deserves a long policy.", href: A, cta: "Let's talk", long: "Whole life is for the needs that do not end: a dependent, an estate, a promise. An advisor can size it to your budget." },
+      { photo: 127, kicker: "Whole life", caption: "Leave more than the good china.", href: A, cta: "Let's talk", long: "A whole life policy leaves a stated sum to the people you choose, whatever the markets did that year." },
     ] as Sq[],
   },
 };
@@ -574,7 +606,7 @@ export const GUIDE = {
     { label: "A contract", line: "52%", fitClass: "fit--display fit--num", tone: "sky", icon: "document", source: "baro26",
       body: "of U.S. adults say they own life insurance. At its simplest it is a contract: you pay premiums, and if you die while cover is in place the insurer pays a death benefit to the beneficiaries you named.",
       long: "Everything else in life insurance is a variation on three variables: how long the contract lasts, whether the premium can change, and what happens to any money that builds up inside it." },
-    { photo: 157, kicker: "Newborn", caption: "Why the contract exists",
+    { photo: 157, kicker: "Life insurance", caption: "Seven pounds of reasons to read on.", href: "#types", cta: "See the types",
       long: "A birth is the most common reason to buy life insurance. A household that depended on two incomes now depends on them for a third person as well." },
     { label: "Term", line: "Term", fitClass: "fit--display", tone: "sun", icon: "calendar",
       body: "A death benefit for a set period. If you die within the term your beneficiaries are paid; after it ends there is no payout.",
@@ -607,7 +639,7 @@ export const GUIDE = {
 
   howMuch: [
       { widget: "multiple", tone: "sun" },
-    { photo: 207, kicker: "Calculating", caption: "Adding it up",
+    { photo: 207, kicker: "Life insurance calculator", caption: "Coffee, laptop, and a number you can act on.", href: `${T}#calculator`, cta: "Calculate it",
       long: "Work through the list: income, dependants, years of support, debts, future costs, and what is already saved or insured. The result is a number a household can act on.", pos: "50% 40%" },
     { label: "Factors in the calculation", line: "6", fitClass: "fit--display fit--num", tone: "sky", icon: "document",
       body: "Your income; how many people depend on you; how long they will need support; debts and a mortgage; costs ahead such as college; and assets you already have.",
@@ -630,7 +662,7 @@ export const GUIDE = {
     { label: "Option three", line: "Total surrender", tone: "blush", icon: "lock",
       body: "End the policy and take the whole cash value. Use it only when your heirs no longer need the death benefit.",
       long: "Gains above what you paid are taxed as ordinary income, and the cover is lost." },
-    { photo: 337, kicker: "A milestone", caption: "What it can pay for",
+    { photo: 337, kicker: "Whole life", caption: "A policy with a savings habit.", href: W, cta: "See whole life",
       long: "A first home, a child's tuition or a business share are the usual calls on cash value; each should be weighed against the death benefit the family would lose." },
   ] as Sq[],
 
@@ -644,8 +676,8 @@ export const GUIDE = {
   ] as Sq[],
 
   revisit: [
-    { photo: 137, kicker: "Marriage", caption: "Getting married", long: "Combining lives creates dependence, which is a reason for cover. Review beneficiary designations too." },
-    { photo: 17, kicker: "Family", caption: "Starting or growing a family", long: "Every child lengthens the period of dependence and increases the amount needed." },
+    { photo: 137, kicker: "Getting married", caption: "You said \"I do.\" Now say \"we're covered.\"", href: A, cta: "Talk to an advisor", long: "Combining lives creates dependence, which is a reason for cover. Review beneficiary designations too." },
+    { photo: 17, kicker: "Growing a family", caption: "One more plate at the table. One more reason.", href: A, cta: "Talk to an advisor", long: "Every child lengthens the period of dependence and increases the amount needed." },
     { label: "A house", line: "Buying a house", tone: "sun", icon: "house", body: "A mortgage is a large, long obligation that a surviving partner may not be able to carry alone." },
     { label: "A business", line: "Starting a business", tone: "sky", icon: "briefcase", body: "Partners often insure each other so a survivor can buy the share from the family." },
     { label: "Parents", line: "Supporting aging parents", tone: "paper", icon: "family", body: "If your parents depend on you, cover can help carry their costs." },
@@ -659,7 +691,7 @@ export const GUIDE = {
       body: "Extra group cover you pay for at group rates, from a few thousand dollars to several times salary." },
     { label: "The catch", line: "Not portable", fitClass: "fit--display", tone: "sun", icon: "lock",
       body: "Leave the job and you may lose the cover, and the group rate can change over time. A policy you own does not depend on the employer." },
-    { photo: 303, kicker: "Individually", caption: "Cover you own",
+    { photo: 303, kicker: "Individual cover", caption: "Your policy should follow you, not your badge.", href: A, cta: "Find an advisor",
       long: "Many people buy individual cover through an advisor, who can help work out what costs must be covered and which type of policy fits." },
   ] as Sq[],
 
@@ -684,6 +716,7 @@ export const GUIDE = {
 
   related: [
     { label: "Article", line: "Seven events that increase your need for life insurance", tone: "paper", icon: "calendar", body: "Marriage, a child, a house, a business, a parent, a loan: the same events as above, with more on each." },
+    CALLOUT.group,
     { label: "Article", line: "Why buy life insurance for your kids?", tone: "sky", icon: "baby", body: "A small policy on a child locks in insurability and a premium for life." },
     { label: "Article", line: "Is whole life insurance a good investment?", tone: "sun", icon: "scale", body: "An honest look at what the cash value does and does not do.", href: W, cta: "Whole life" },
   ] as Sq[],
@@ -703,7 +736,7 @@ export const ADVISOR = {
       body: "I work mostly with young families: couples with a first child, a first mortgage and a shared sense that something ought to be put in place.",
       long: "This profile is invented for the study. It follows the shape of an advisor's page: a name, a role, a way to connect, and tabs for the sections of a practice.",
       btn: { label: "Let's connect", href: "#contact", variant: "gold" as const } },
-    { photo: 121, kicker: "Families I work with", caption: "Young families, mostly",
+    { photo: 121, kicker: "Who I work with", caption: "Small humans, big plans. That's my specialty.", href: "#contact", cta: "Let's connect",
       long: "Most of my clients are between twenty-eight and forty-five, with children under ten. Their needs are simple to state and surprisingly easy to neglect." },
     { label: "Call", line: "555-0142", fitClass: "fit--display fit--num", tone: "sun", icon: "phone", body: "A number for the study; it does not ring." },
     { label: "Office", line: "Springfield", fitClass: "fit--display", tone: "sky", icon: "pin", body: "100 Example Avenue, Suite 400. An invented address." },
@@ -721,7 +754,7 @@ export const ADVISOR = {
   },
 
   about: [
-    { photo: 9, kicker: "About me", caption: "Why this work",
+    { photo: 9, kicker: "About me", caption: "I ask the nosy questions so your family never has to.", href: "#planning", cta: "How planning works",
       long: "I came to this work after helping my own family through the loss of a parent whose cover had lapsed. It taught me that the policy is the least of it; what matters is the conversation that happens before." },
     { label: "About me", line: "I ask before I recommend", fitClass: "fit--display", tone: "sun", icon: "heart",
       body: "A first meeting is a list of questions: what you earn, what you owe, who depends on you and what you would want to be true in twenty years.",
@@ -748,19 +781,20 @@ export const ADVISOR = {
     { label: "Insurance", line: "Term life", tone: "sky", icon: "calendar", body: "Protection for the years a family depends on one income.", href: T, cta: "Term life" },
     { label: "Insurance", line: "Whole life", tone: "paper", icon: "heart", body: "Lifelong cover with cash value, for needs that do not end.", href: W, cta: "Whole life" },
     { label: "Planning", line: "Financial planning", tone: "blush", icon: "compass", body: "College, retirement and estate planning, by appointment." },
-    { photo: 82, kicker: "Together", caption: "What it is all for" },
+    { photo: 82, kicker: "Term life", caption: "My most requested product. By a mile.", href: T, cta: "See term life", long: "For most of the families I see, the first recommendation is the same: enough term cover, for long enough, with the right to convert." },
   ] as Sq[],
 
   resources: [
     { label: "Guide", line: "Life Insurance Guide", fitClass: "fit--display", tone: "sky", icon: "book", body: "How life insurance works, in eight sections.", href: G, cta: "Read the guide" },
+    CALLOUT.risk,
     { label: "Calculator", line: "How much cover do I need?", tone: "sun", icon: "chart", body: "A worksheet that adds up what your family would need.", href: `${T}#calculator`, cta: "Calculate it" },
     { label: "Article", line: "How to choose an advisor", tone: "paper", icon: "person", body: "Questions to ask of anyone who offers to manage your plan." },
   ] as Sq[],
 
   cta: [
     { label: "Ready to work together?", line: "Let's connect", fitClass: "fit--display", tone: "navy", body: "A call or a visit; either takes about thirty minutes.", btn: { label: "Let's connect", href: "#contact", variant: "gold" as const } },
-    { photo: 25, kicker: "Together", caption: "Where it begins" },
-    { photo: 16, kicker: "Together", caption: "Where it goes" },
+    { photo: 25, kicker: "First meeting", caption: "Thirty minutes. Bring the babies.", href: "#contact", cta: "Let's connect", long: "A first meeting is free, short and tolerant of interruptions. Bring whatever paperwork is to hand." },
+    { photo: 16, kicker: "Yearly review", caption: "Kids grow. Plans should too.", href: "#planning", cta: "How planning works", long: "The plan is reviewed once a year and whenever the household changes, which with small children is roughly always." },
   ] as Sq[],
 };
 
@@ -795,7 +829,7 @@ export const DI = {
     { label: "Disability income calculator", line: "Protect the income everything else depends on", fitClass: "fit--display", tone: "navy",
       body: "Estimate how much cover you would need to keep paying the bills if an illness or an injury stopped you working. Three short steps, then a figure you can change.",
       btn: { label: "Calculate it", href: "#calculator", variant: "gold" as const } },
-    { photo: 16, kicker: "Income", caption: "What an income carries",
+    { photo: 16, kicker: "Disability income", caption: "Your best asset walks to work every morning.", href: "#calculator", cta: "Calculate it",
       long: "A household's largest asset is usually not the house or the savings but the earnings still ahead. Disability income insurance protects those earnings while the earner is alive and unable to work." },
     { label: "Usual group cover", line: "60%", fitClass: "fit--display fit--num", tone: "open", icon: "briefcase",
       body: "of pay is what an employer's group plan typically replaces, and the benefit is usually taxable when the employer pays the premium.",

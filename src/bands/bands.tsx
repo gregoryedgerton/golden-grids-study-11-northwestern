@@ -93,7 +93,7 @@ function PicCard({ pic, x, slotKey }: { pic: Pic; x: ExpandGroup; slotKey: strin
     <>
       <figure className="media">
         <img src={p.src} alt={p.alt} loading="lazy" style={pic.pos ? { objectPosition: pic.pos } : undefined} />
-        <button className="media__open" {...x.triggerProps(slotKey)}><span className="visually-hidden">Open the photograph: {p.alt}</span></button>
+        <button className="media__open" {...x.triggerProps(slotKey)}><span className="visually-hidden">{pic.caption ? `More: ${pic.caption}` : `Open the photograph: ${p.alt}`}</span></button>
         {(pic.kicker || pic.caption) && (
           <figcaption className="media__caption">
             {pic.kicker && <span className="media__kicker">{pic.kicker}</span>}
@@ -108,7 +108,11 @@ function PicCard({ pic, x, slotKey }: { pic: Pic; x: ExpandGroup; slotKey: strin
               <img src={p.src} alt={p.alt} />
               <figcaption className="note">Photograph: {p.by}, <a href={p.page}>Unsplash</a>, under the Unsplash License.</figcaption>
             </figure>
-            <div className="cell__body">{pic.long ? <p>{pic.long}</p> : <p>{p.alt}.</p>}</div>
+            <div className="cell__body">
+              {pic.kicker && <p className="cell__kicker">{pic.kicker}</p>}
+              {pic.long && <p>{pic.long}</p>}
+              {pic.href && <p><a className="btn btn--blue" href={pic.href}>{pic.cta ?? "Learn more"}</a></p>}
+            </div>
           </div>
         </ExpandedCell>
       )}

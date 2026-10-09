@@ -30,8 +30,8 @@ function App() {
       <Newsletter />
       <Squares id="cta" title="See how life insurance fits into your financial plan" quiet squares={[
         { label: "Plan", line: "See how life insurance fits into your financial plan", fitClass: "fit--display", tone: "navy", body: "Our advisors look at your whole financial situation and show you how life insurance can help you reach your goals.", btn: { label: "Connect with an advisor", href: "./advisor.html", variant: "gold" } },
-        { photo: 82, kicker: "Together", caption: "The point of it" },
-        { photo: 75, kicker: "Together", caption: "The years ahead" },
+        { photo: 82, kicker: "Life insurance", caption: "This is the fine print that matters.", href: "./advisor.html", cta: "Talk to an advisor", long: "Everything in the guide comes down to this: the people you would want looked after, and a policy sized to look after them." },
+        { photo: 75, kicker: "Term life", caption: "Twenty years of muddy boots, covered.", href: "./term-life.html", cta: "See term life", long: "Term cover runs for the years a family depends on you. Choose the length, fix the premium and stop thinking about it." },
       ]} variant={3} tone="navy" />
     </Page>
   );
