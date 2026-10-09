@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 import { Tools } from "./tools";
+import { StudyBanner, StudyDisclosure } from "./study";
 import { Credits } from "./modules";
-import { NAV, UTILITY, FOOTER, SOURCE, CAPTURED, PAGES } from "../content";
+import { NAV, UTILITY, FOOTER, PAGES } from "../content";
 
 /**
  * The shell, after the reference's: a utility strip, the wordmark and a row
@@ -13,8 +14,8 @@ export function Page({ current, crumbs, source, children }: { current: string; c
   return (
     <>
       <a className="skip" href="#content">Skip to content</a>
+      <StudyBanner />
       <Tools />
-      <aside className="notice" aria-label="About this site"><p>A layout study by GIFcommit of {SOURCE.home.label}. <strong>GIFcommit is not an insurer</strong>: nothing here is insurance, advice or an offer, and no form sends anything.</p></aside>
       <header className="top">
         <div className="top__util">
           <div className="wrap top__utilwrap"><div className="top__utilrow">
@@ -44,19 +45,11 @@ export function Page({ current, crumbs, source, children }: { current: string; c
             </section>
           ))}
         </div>
-        <div className="wrap colophon">
-          <p>
-            A layout study of seven pages of <a href={SOURCE.home.url}>northwesternmutual.com</a>, captured {CAPTURED}: the <a href={SOURCE.home.url}>home page</a>,{" "}
-            <a href={SOURCE.life.url}>Life insurance</a>, <a href={SOURCE.term.url}>Term life insurance</a>, <a href={SOURCE.whole.url}>Whole life insurance</a>,
-            the <a href={SOURCE.guide.url}>Life Insurance Guide</a>, <a href={SOURCE.advisor.url}>an advisor's profile site</a> and the <a href={SOURCE.di.url}>disability insurance calculator</a>. This page is {source.label}.
-            GIFcommit is a layout-study brand, not an insurer or a licensed advisor. The words are the study's own, written about how life insurance works;
-            none of the reference's copy, ratings, rankings or prices is reproduced, and the advisor, team, address and telephone number are invented.
-            Not affiliated with, or endorsed by, Northwestern Mutual. Built with <a href="https://github.com/gregoryedgerton/golden-grids">Golden Grids</a> ·{" "}
-            <a href="https://www.npmjs.com/package/@gifcommit/golden-grids">npm</a> · <a href="https://gregoryedgerton.github.io/golden-grids/">generator</a>.
-          </p>
-          <Credits />
-        </div>
       </footer>
+      <StudyDisclosure>
+        <p>This page follows <a href={source.url}>{source.label}</a> on the reference site.</p>
+        <Credits />
+      </StudyDisclosure>
     </>
   );
 }

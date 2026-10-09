@@ -1,0 +1,79 @@
+{
+  "number": "11",
+  "name": "Northwestern Mutual",
+  "notice": "A layout study, not Northwestern Mutual: seven of its pages rebuilt with Golden Grids for GIFcommit, a fictional insurer. Not affiliated with Northwestern Mutual; nothing here is insurance, advice or an offer.",
+  "pages": {
+    "advisor": "An advisor's profile",
+    "disability-calculator": "Disability income calculator",
+    "guide": "Life Insurance Guide",
+    "index": "Home",
+    "life-insurance": "Life insurance",
+    "term-life": "Term life insurance",
+    "whole-life": "Whole life insurance"
+  },
+  "summary": "Seven pages of northwesternmutual.com (home, life insurance, term life, whole life, the Life Insurance Guide, an advisor's profile and the disability insurance calculator) rebuilt as stacked golden grids for an insurer that does not exist.",
+  "reviewed": {
+    "date": "October 8, 2026",
+    "method": "Captured at 390, 820 and 1440 pixels and read in a browser. The reference's calculator was walked through once with test figures; its contact form was not submitted.",
+    "pages": [
+      {
+        "label": "Home",
+        "url": "https://www.northwesternmutual.com/"
+      },
+      {
+        "label": "Life insurance",
+        "url": "https://www.northwesternmutual.com/life-insurance/"
+      },
+      {
+        "label": "Term life insurance",
+        "url": "https://www.northwesternmutual.com/life-insurance/term-life-insurance/"
+      },
+      {
+        "label": "Whole life insurance",
+        "url": "https://www.northwesternmutual.com/life-insurance/whole-life-insurance/"
+      },
+      {
+        "label": "Life Insurance Guide",
+        "url": "https://www.northwesternmutual.com/life-and-money/life-insurance-guide/"
+      },
+      {
+        "label": "An advisor's profile site",
+        "url": "https://www.northwesternmutual.com/financial/advisor/mike-lutz/"
+      },
+      {
+        "label": "Disability insurance calculator",
+        "url": "https://www.northwesternmutual.com/disability-insurance/disability-insurance-calculator/"
+      }
+    ]
+  },
+  "real": [
+    "The statistics, each with its source named in its square: LIMRA and Life Happens, LIMRA's sales figures, the Social Security Administration, Child Care Aware of America, the College Board, the National Association of Realtors, Brookings and NOLHGA. Some were confirmed only from summaries of those sources.",
+    "The general account of how term and whole life insurance work."
+  ],
+  "invented": [
+    "GIFcommit as an insurer. It sells nothing, holds no licence and has no ratings, prices or dividends.",
+    "The advisor, the team, the office address and the telephone number.",
+    "Every sentence, which is the study's own; none of the reference's copy, ratings, rankings or prices is carried over.",
+    "The calculators' methods, which are the study's and are printed where they are used. They quote no premium, and no form sends anything."
+  ],
+  "assets": [
+    {
+      "what": "Photographs",
+      "source": "Unsplash contributors, each credited below",
+      "url": "https://unsplash.com/license",
+      "licence": "Unsplash License"
+    },
+    {
+      "what": "Icons",
+      "source": "Northwestern Mutual's own icon drawings, copied from its pages at the author's request. Their licence for reuse is not known."
+    },
+    {
+      "what": "Typeface",
+      "source": "Source Sans 3, standing in for the site's Guardian Sans",
+      "licence": "SIL Open Font License"
+    }
+  ],
+  "owner": "Northwestern Mutual",
+  "repo": "https://github.com/gregoryedgerton/golden-grids-study-11-northwestern",
+  "updated": "October 9, 2026"
+}
