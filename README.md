@@ -36,7 +36,12 @@ The register is the guide's, from measurement
 ([`captures/tokens-guide.json`](captures/tokens-guide.json)): white ground,
 `#f8fafc` panels, the bar `#0e497b`, the label `#83d4f1`, links and buttons
 `#1570bc`, gold `#ffb81c` for rules and the closing button, body at 19px/300 in
-`#4a4a4a`, headings at 500, 2px corners, and numbers set thin. Source Sans 3
+`#4a4a4a`, headings at 500, 2px corners, and numbers set thin. No cell has an
+outline: an edge is a flat colour, as on the reference. Cells are the brand's
+grey `#edf0f3`, a gold or blue tint, or the deep blue; the two tones nearest
+the white ground carry a gold bar on top or a blue bar at the side instead.
+The opened cell is pale under a blue bar, and the comparison table is striped
+in grey where it had rules. Source Sans 3
 stands in for Guardian Sans. The reference has one scheme; the dark one is the
 study's. (A first draft took the home page's serif-and-awning look and was
 rejected.)
@@ -149,8 +154,8 @@ is protected?", from 3 with a strip: 1 in 4, a photograph, 60%, 67 and the
 number of steps). Callout cells lead to it from the term life page's numbers,
 the guide's related articles and the advisor's resources.
 
-On this page the cells have no outlines and no fills. Only the result card
-keeps a ground and a rule, as the reference's does. Below 1100px the form, the
+On this page the cells are flat grey with no lines; the result card is pale
+with a blue bar at its side, as the reference's is. Below 1100px the form, the
 sliders and the sentences stand above their grids at full width and the grids
 hold the figures and charts.
 

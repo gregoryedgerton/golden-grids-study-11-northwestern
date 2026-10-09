@@ -193,8 +193,7 @@ README: the smallest line, and that no screen-reader user has tested it.
   arbitrary cells; below desktop the form, sliders and sentences go in its
   `flat` slot above the grid. `?example` opens the page with the example
   answers and the result, which is how the scan and captures reach it. Cells
-  on this page use `box--open`: NO outlines, no fills ("don't go as heavy with
-  grid lines", Greg); only the result card keeps a ground.
+  on this page use `box--open` ("don't go as heavy with grid lines", Greg).
 - PHOTO CAPTIONS ARE MARKETING COPY, never a description of the picture
   (Greg, 2026-10-08: "in any place where we are describing the image, don't";
   "permission to be cheeky"). The description lives only in the alt text
@@ -205,6 +204,17 @@ README: the smallest line, and that no screen-reader user has tested it.
 - The calculator is in the main nav ("Calculator"), has its own grid
   (`DIBAND`) on the home and life insurance pages, and is reached by callout
   cells (`CALLOUT.group`, `CALLOUT.risk`) from other grids.
+- NO OUTLINES ON CELLS (Greg, 2026-10-09: "their branding uses flat colors to
+  define edges"). `.box` has no border; an edge is a flat fill. `paper` is the
+  brand grey #edf0f3, `sun`/`sky` the tints, `navy`/`mid` the blues; `white`
+  and `blush` sit near the white ground so they carry an accent bar (gold on
+  top, blue at the side) by inset box-shadow. The calculator's `box--open` is
+  grey; the result card is pale with a blue side bar. The opened cell
+  overrides expand.css's outline: pale ground, blue top bar, no rule under its
+  head. The table is striped; quiz, jump strip and sub-nav are grey bands.
+  Form inputs keep their borders and the secondary button stays outlined.
+  On grey, links and More use the deep blue (`--tone-head`): #1570bc on
+  #edf0f3 is 4.4:1 and fails.
 - The icons are the reference's own duotone drawings and interface glyphs,
   copied from its pages at Greg's request (`src/site-icons`,
   `captures/icons-scan.cjs`). Never its logo, its award badges (NerdWallet),
