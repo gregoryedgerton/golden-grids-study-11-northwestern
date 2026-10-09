@@ -14,7 +14,7 @@
 import type { IconName } from "./icons";
 import type { SourceKey } from "./sources";
 
-export type Tone = "paper" | "sun" | "sky" | "navy" | "mid" | "blush" | "white";
+export type Tone = "paper" | "sun" | "sky" | "navy" | "mid" | "blush" | "white" | "open";
 /** A fact that fits a square: a label, a fitted line, body copy and a longer passage behind More. */
 export interface Fact {
   label?: string; labelClass?: string; line: string; fitClass?: string;
@@ -43,19 +43,21 @@ export const SOURCE = {
   whole: { label: "Whole life insurance", url: "https://www.northwesternmutual.com/life-insurance/whole-life-insurance/" },
   guide: { label: "Life Insurance Guide", url: "https://www.northwesternmutual.com/life-and-money/life-insurance-guide/" },
   advisor: { label: "An advisor's profile site", url: "https://www.northwesternmutual.com/financial/advisor/mike-lutz/" },
+  di: { label: "Disability insurance calculator", url: "https://www.northwesternmutual.com/disability-insurance/disability-insurance-calculator/" },
 };
 
 export const NAV: [string, string][] = [["About us", "#"], ["Financial planning", "#"], ["Insurance", "./life-insurance.html"], ["Investments", "#"], ["Life & Money", "./guide.html"]];
 export const UTILITY = ["Log in", "Claims"];
 export const FOOTER: [string, [string, string][]][] = [
-  ["Insurance", [["Life insurance", "./life-insurance.html"], ["Term life", "./term-life.html"], ["Whole life", "./whole-life.html"], ["Life Insurance Guide", "./guide.html"], ["Disability income", "#"]]],
+  ["Insurance", [["Life insurance", "./life-insurance.html"], ["Term life", "./term-life.html"], ["Whole life", "./whole-life.html"], ["Life Insurance Guide", "./guide.html"], ["Disability income calculator", "./disability-calculator.html"]]],
   ["Planning", [["Financial planning", "#"], ["Retirement", "#"], ["College savings", "#"], ["Estate planning", "#"], ["Long-term care", "#"]]],
   ["Working with us", [["Find a financial advisor", "./advisor.html"], ["Working with an advisor", "./advisor.html"], ["Claims", "#"], ["Careers", "#"], ["Contact us", "#"]]],
   ["About", [["Who we are", "#"], ["Newsroom", "#"], ["Security and privacy", "#"], ["Legal notice", "#"], ["Sitemap", "#"]]],
 ];
 
 const H = "./index.html", L = "./life-insurance.html", T = "./term-life.html", W = "./whole-life.html", G = "./guide.html", A = "./advisor.html";
-export const PAGES = { H, L, T, W, G, A };
+const D = "./disability-calculator.html";
+export const PAGES = { H, L, T, W, G, A, D };
 
 // --- Home ----------------------------------------------------------------------
 
@@ -360,6 +362,7 @@ export const TERM = {
         long: "It adjusts USDA's estimate for a child born in 2015 for inflation. A death benefit is sized in part to the years of spending still ahead." },
       { label: "Disabled before 67", line: "1 in 4", fitClass: "fit--display fit--num", tone: "sun", icon: "umbrella", source: "ssa",
         body: "of today's 20-year-olds will become disabled and qualify for Social Security disabled-worker benefits before reaching 67.",
+        href: D, cta: "Income calculator",
         long: "Disability, not death, is the likelier way for a young family to lose an income, which is why the two kinds of cover are usually discussed together." },
       { label: "Rule of thumb", line: "10×", fitClass: "fit--display fit--num", tone: "paper", icon: "chart",
         body: "annual income is the usual first estimate of the cover to buy. Add the mortgage, other debts and schooling for a better figure.",
@@ -783,4 +786,22 @@ export const STRIPS: Record<string, Strip> = {
   guideWhere: { label: "First meeting", strip: "$0", sub: "A first meeting with an advisor", href: A, tone: "navy", icon: "person" },
   advDifference: { label: "On the team", strip: "3", sub: "people on the team", href: "#team", tone: "navy", icon: "family" },
   advTeam: { label: "Call", strip: "555-0142", sub: "Call", href: "#contact", tone: "navy", icon: "phone" },
+};
+
+// --- The disability income calculator ---------------------------------------------
+
+export const DI = {
+  hero: [
+    { label: "Disability income calculator", line: "Protect the income everything else depends on", fitClass: "fit--display", tone: "navy",
+      body: "Estimate how much cover you would need to keep paying the bills if an illness or an injury stopped you working. Three short steps, then a figure you can change.",
+      btn: { label: "Calculate it", href: "#calculator", variant: "gold" as const } },
+    { photo: 16, kicker: "Income", caption: "What an income carries",
+      long: "A household's largest asset is usually not the house or the savings but the earnings still ahead. Disability income insurance protects those earnings while the earner is alive and unable to work." },
+    { label: "Usual group cover", line: "60%", fitClass: "fit--display fit--num", tone: "open", icon: "briefcase",
+      body: "of pay is what an employer's group plan typically replaces, and the benefit is usually taxable when the employer pays the premium.",
+      long: "Individual cover is bought to close the gap between that figure and what the household needs. Its benefit is generally free of income tax when you pay the premium yourself." },
+    { label: "Disabled before 67", line: "1 in 4", fitClass: "fit--display fit--num", tone: "open", icon: "umbrella", source: "ssa",
+      body: "of today's 20-year-olds will become disabled and qualify for Social Security disabled-worker benefits before 67." },
+  ] as Sq[],
+  strip: { label: "Steps", strip: "3", sub: "then a figure you can change.", href: "#calculator", tone: "open", icon: "check" } as Strip,
 };

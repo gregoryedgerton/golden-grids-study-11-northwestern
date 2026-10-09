@@ -12,8 +12,8 @@ function pagesBase(): string {
   return `/${repo}/`;
 }
 
-// Six pages, no router, plain relative links, as the reference's are.
-const pages = ["index", "life-insurance", "term-life", "whole-life", "guide", "advisor"];
+// Seven pages, no router, plain relative links, as the reference's are.
+const pages = ["index", "life-insurance", "term-life", "whole-life", "guide", "advisor", "disability-calculator"];
 
 export default defineConfig({
   base: pagesBase(),

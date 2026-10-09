@@ -1,15 +1,16 @@
-# Layout study — six pages of Northwestern Mutual, as GIFcommit
+# Layout study — seven pages of Northwestern Mutual, as GIFcommit
 
 **Live:** [`https://gregoryedgerton.github.io/golden-grids-study-11-northwestern/`](https://gregoryedgerton.github.io/golden-grids-study-11-northwestern/)
 
-An unaffiliated layout study. It rebuilds the structure of six pages of
+An unaffiliated layout study. It rebuilds the structure of seven pages of
 [northwesternmutual.com](https://www.northwesternmutual.com/) as stacked
 golden grids for GIFcommit, a fictional mutual insurer: the home page, [Life
 insurance](https://www.northwesternmutual.com/life-insurance/), [Term life
 insurance](https://www.northwesternmutual.com/life-insurance/term-life-insurance/),
 [Whole life insurance](https://www.northwesternmutual.com/life-insurance/whole-life-insurance/),
 the [Life Insurance Guide](https://www.northwesternmutual.com/life-and-money/life-insurance-guide/)
-and [an advisor's profile site](https://www.northwesternmutual.com/financial/advisor/mike-lutz/).
+[an advisor's profile site](https://www.northwesternmutual.com/financial/advisor/mike-lutz/)
+and the [disability insurance calculator](https://www.northwesternmutual.com/disability-insurance/disability-insurance-calculator/).
 GIFcommit is not an insurer. Nothing on it is insurance, advice or an offer,
 no form sends anything, and the advisor, team, address and telephone number
 are invented. The words are the study's own; none of the reference's copy,
@@ -51,7 +52,7 @@ side the lead sits on change from band to band.
 
 ## The pages
 
-Six Vite entries, plain relative links, no router. One component, `Squares`
+Seven Vite entries, plain relative links, no router. One component, `Squares`
 ([`src/bands/bands.tsx`](src/bands/bands.tsx)), draws every band: a fact, a
 photograph, a strip or a widget per square. `lib/plan.ts` chooses the grid
 from a table of the library's own geometry (`lib/spiral.ts`). Measured sizes
@@ -133,6 +134,20 @@ one and a band of five or six is dealt into two stacked grids.
 | Let's boost your financial knowledge | from 1 to 3 · bottom · ccw | 358×537 / 788×525 / 1140×760 |
 | Ready to work together? | from 1 to 3 · top · ccw | 358×537 / 788×525 / 1140×760 |
 
+**Disability income calculator** (`disability-calculator.html`)
+
+| Band | Grid at 1440 | What it holds |
+| --- | --- | --- |
+| Protect your income | from 2 to 4 · strip | Headline and "Calculate it"; a photograph; 60% and 1 in 4 as figures; the strip is the number of steps |
+| Disability income calculator | from 1 to 4 | The three steps as one form in the largest square; step, monthly income and working years to 67 fill in beside it as you type |
+| The cover you may need | from 2 to 5 · strip | The monthly figure with its share slider; cover against expenses as bars; a sentence; group cover; the strip is monthly income |
+| How long your savings would last | from 1 to 5 | Savings with and without individual cover as two lines, with a time slider; how long savings alone last; a note for the kind of work; earnings to 67; months |
+
+On this page the cells have no outlines and no fills. Only the result card
+keeps a ground and a rule, as the reference's does. Below 1100px the form, the
+sliders and the sentences stand above their grids at full width and the grids
+hold the figures and charts.
+
 Flat modules: the section bars' running text (`Prose`, with check lists and a
 figure panel), accordions of questions (original answers), the cover
 calculator, a quiz on the term and guide pages, the whole-versus-term table,
@@ -173,8 +188,31 @@ request of the study's author.
 - Light and dark by device preference; reduced motion respected; every Close
   is the outlined blue button.
 - [`captures/scan.cjs`](captures/scan.cjs), Chrome and WebKit, 390 / 820 /
-  1440, light and dark, all six pages: nothing overflows, no fitted line under
+  1440, light and dark, all seven pages (the calculator with and without a
+  result): nothing overflows, no fitted line under
   12px, axe clean with a More open. No screen-reader user has tested it.
+
+## The calculator
+
+The reference's calculator was walked through once with test figures (age 32,
+$85,000, $4,500 a month, $12,000 saved, professional, group cover) and its
+closing contact form was left alone. It asks age and gender; income, monthly
+expenses and savings; and the kind of job and whether there is group cover,
+one step to a page, then shows a monthly figure, a bar chart of cover against
+expenses and a chart of savings over a predicted length of disability, and
+ends in a form that sends your details to an advisor.
+
+The study keeps the three steps and the two charts and changes the rest. The
+steps share one square and the figures beside it update as you type. Gender
+is not asked, because nothing here uses it. The kind of work chooses a note on
+what to look for in a policy, not a predicted length of disability: the
+reference projects that from an actuarial table this study does not have, so
+the length is a slider. Group cover is counted at 60% of monthly income, as
+the reference states. The share of income to replace is a slider from 50% to
+80%; it starts at 80% because the one run of the reference came to that with
+group cover included. No premium is shown and there is no contact form:
+nothing entered is stored or sent, and a scripted run through the steps at
+three widths made no request other than a GET.
 
 ## What did not
 

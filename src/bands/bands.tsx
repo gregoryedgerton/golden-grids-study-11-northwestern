@@ -168,3 +168,31 @@ export function Squares({ id, kicker, title, lesson, squares, variant = 0, quiet
     </Band>
   );
 }
+
+/**
+ * A band of arbitrary cells: the same grid choice as `Squares`, for cells that
+ * are not facts or photographs (a form, a chart, a control). `strip` fills the
+ * placeholder of a skipped range; `flat` is content that stands above the grid
+ * at full width, for what a small square cannot hold.
+ */
+export function GridBand({ id, kicker, title, lesson, quiet, tone, cells, strip, from = 1, variant = 0, lead, flat }: {
+  id: string; kicker?: string; title: string; lesson?: string; quiet?: boolean; tone?: "navy";
+  cells: React.ReactNode[]; strip?: React.ReactNode; from?: number; variant?: number; lead?: boolean; flat?: React.ReactNode;
+}) {
+  const v = useViewport();
+  const [ref, width] = useWidth();
+  const all = strip ? [...cells, strip] : cells;
+  const landscape = v !== "mobile";
+  const skipPlan = strip && from > 1 && width > 0 ? plan(width, from, cells.length, landscape, variant, lead) : null;
+  const regular = skipPlan ? null : plan(width || 1000, 1, all.length, landscape, variant, lead);
+  const p = skipPlan ?? regular ?? { from: 1, to: all.length, placement: "right" as PlacementValue, cw: true };
+  const boxes = all.map((c, i) => <GoldenBox key={i}>{c}</GoldenBox>);
+  const note = skipPlan ? `from=${p.from} to=${p.to} · placement="${p.placement}" · clockwise=${p.cw} · strip = last child` : noteFor(v, all.length, p.placement, p.cw);
+  return (
+    <Band id={id} kicker={kicker} title={title} lesson={lesson} quiet={quiet} tone={tone} note={note} wrapRef={ref} before={flat}>
+      {skipPlan
+        ? <GoldenGrid from={p.from} to={p.to} placement={p.placement} clockwise={p.cw}>{boxes}</GoldenGrid>
+        : <Grids placement={p.placement} cw={p.cw} split={v !== "desktop"} boxes={boxes} />}
+    </Band>
+  );
+}

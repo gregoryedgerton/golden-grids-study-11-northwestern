@@ -8,7 +8,8 @@
 const { chromium, webkit } = require('playwright');
 (async () => {
   const [base = 'http://localhost:5173/', ...pages] = process.argv.slice(2);
-  const targets = pages.length ? pages.map((p) => `${base}${p}.html`) : [base];
+  // A page may carry a query: "disability-calculator?example" scans the calculator with its result open.
+  const targets = pages.length ? pages.map((p) => { const [n, q] = p.split('?'); return `${base}${n}.html${q ? `?${q}` : ''}`; }) : [base];
   let problems = 0;
   for (const [name, engine] of [['chrome', chromium], ['webkit', webkit]]) {
     let b; try { b = await engine.launch(name === 'chrome' ? { channel: 'chrome' } : {}); } catch (e) { console.log(`${name}: not available (${e.message.split('\n')[0]})`); continue; }

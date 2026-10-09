@@ -6,8 +6,9 @@
 - `unsplash.tsv` — provenance of every photograph.
 - `study.cjs` — screenshots of the study at three widths; `study-*-1440.jpg` are the current ones.
 - `scan.cjs` — overflow, fitted-line floor and axe, Chrome and WebKit, three widths, both schemes.
+- `proof-calculator.png` — the calculator with its result open, at 1440.
 - `measure.cjs` — the band table in the README.
 
 ```bash
-NODE_PATH=<a node_modules with playwright> node captures/scan.cjs http://localhost:5185/ index life-insurance term-life whole-life guide advisor
+NODE_PATH=<a node_modules with playwright> node captures/scan.cjs http://localhost:5185/ index life-insurance term-life whole-life guide advisor disability-calculator "disability-calculator?example"
 ```

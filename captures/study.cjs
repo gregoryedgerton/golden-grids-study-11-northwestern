@@ -10,11 +10,11 @@ const PAGES = fs.readdirSync(path.join(__dirname, '..')).filter((f) => f.endsWit
     const ctx = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, reducedMotion: 'reduce' });
     const p = await ctx.newPage(); const errors = [];
     p.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
-    await p.goto(`${base}${page}.html`, { waitUntil: 'networkidle' });
+    const [pn, pq] = page.split('?'); await p.goto(`${base}${pn}.html${pq ? `?${pq}` : ''}`, { waitUntil: 'networkidle' });
     // Lazy images load as they scroll into view; walk the page first.
     await p.evaluate(async () => { const el = document.scrollingElement; for (let y = 0; y < el.scrollHeight; y += 600) { el.scrollTop = y; await new Promise((r) => setTimeout(r, 80)); } el.scrollTop = 0; });
     await p.waitForLoadState('networkidle'); await p.waitForTimeout(400);
-    await p.screenshot({ path: path.join(__dirname, `study-${page}-${w}.png`), fullPage: true });
+    await p.screenshot({ path: path.join(__dirname, `study-${page.replace(/\?.*/, '')}-${w}.png`), fullPage: true });
     if (errors.length) console.log(page, w, 'ERRORS', errors.slice(0, 2).join(' | '));
     await ctx.close();
   }

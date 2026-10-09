@@ -4,12 +4,12 @@ Guidance for agents working in a Golden Grids layout study.
 
 ## What this repo is
 
-Study 11: six pages of northwesternmutual.com (home, Life insurance, Term
-life insurance, Whole life insurance, the Life Insurance Guide and an
-advisor's profile site) rebuilt as stacked golden grids for GIFcommit, a
+Study 11: seven pages of northwesternmutual.com (home, Life insurance, Term
+life insurance, Whole life insurance, the Life Insurance Guide, an advisor's
+profile site and the disability insurance calculator) rebuilt as stacked golden grids for GIFcommit, a
 fictional mutual insurer, in the register of the reference's Life Insurance
-Guide. SIX pages (`index`, `life-insurance`, `term-life`, `whole-life`,
-`guide`, `advisor`), Vite entries with plain links. `src/lib/Page.tsx` is the
+Guide. SEVEN pages (`index`, `life-insurance`, `term-life`, `whole-life`,
+`guide`, `advisor`, `disability-calculator`), Vite entries with plain links. `src/lib/Page.tsx` is the
 shell; `src/bands/bands.tsx` has `Squares`, the one band component (facts,
 photographs, strips, widgets); `src/lib/plan.ts` and `src/lib/spiral.ts`
 choose each grid; `src/lib/modules.tsx` the flat modules (`Prose`, `Faq`,
@@ -185,6 +185,16 @@ README: the smallest line, and that no screen-reader user has tested it.
   desktop a widget stands above its grid at full width. Traditional paragraphs
   (`Prose`, `src/prose.ts`) sit between the grids, with check lists and a panel
   for one figure; in the guide they sit under each section bar (`prose=`).
+- The disability income calculator (`src/lib/IncomeCalc.tsx`,
+  `disability-calculator.html`) is a three-step form in one square with live
+  figures beside it, then two result bands with charts and sliders. Its method
+  is the study's own and is printed on the page; it shows no premium, has no
+  contact form and sends nothing. `GridBand` (bands.tsx) is the band for
+  arbitrary cells; below desktop the form, sliders and sentences go in its
+  `flat` slot above the grid. `?example` opens the page with the example
+  answers and the result, which is how the scan and captures reach it. Cells
+  on this page use `box--open`: NO outlines, no fills ("don't go as heavy with
+  grid lines", Greg); only the result card keeps a ground.
 - The icons are the reference's own duotone drawings and interface glyphs,
   copied from its pages at Greg's request (`src/site-icons`,
   `captures/icons-scan.cjs`). Never its logo, its award badges (NerdWallet),

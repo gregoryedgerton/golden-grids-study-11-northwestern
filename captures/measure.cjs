@@ -1,7 +1,7 @@
 // Measures every band's grid at the program's three widths and prints the README's band table.
 //   NODE_PATH=<node_modules with playwright> node captures/measure.cjs [base-url]
 const { chromium } = require('playwright');
-const PAGES = ['index', 'life-insurance', 'term-life', 'whole-life', 'guide', 'advisor'];
+const PAGES = ['index', 'life-insurance', 'term-life', 'whole-life', 'guide', 'advisor', 'disability-calculator?example'];
 (async () => {
   const base = process.argv[2] || 'http://localhost:5185/';
   const b = await chromium.launch({ channel: 'chrome' });
@@ -9,7 +9,7 @@ const PAGES = ['index', 'life-insurance', 'term-life', 'whole-life', 'guide', 'a
     const rows = {};
     for (const w of [390, 820, 1440]) {
       const p = await (await b.newContext({ viewport: { width: w, height: 900 }, reducedMotion: 'reduce' })).newPage();
-      await p.goto(`${base}${page}.html`, { waitUntil: 'networkidle' }); await p.waitForTimeout(500);
+      const [pn, pq] = page.split('?'); await p.goto(`${base}${pn}.html${pq ? `?${pq}` : ''}`, { waitUntil: 'networkidle' }); await p.waitForTimeout(500);
       const bands = await p.evaluate(() => [...document.querySelectorAll('section.band')].map((s) => ({
         id: s.id, title: (s.querySelector('h2')?.textContent || '').trim(),
         grids: [...s.querySelectorAll('.golden-grid')].filter((g) => !g.parentElement.closest('.golden-grid')).map((g) => { const r = g.getBoundingClientRect(); return `${Math.round(r.width)}×${Math.round(r.height)}`; }),
