@@ -1,0 +1,249 @@
+# CLAUDE.md
+
+Guidance for agents working in a Golden Grids layout study.
+
+## What this repo is
+
+Study 11: six pages of northwesternmutual.com (home, Life insurance, Term
+life insurance, Whole life insurance, the Life Insurance Guide and an
+advisor's profile site) rebuilt as stacked golden grids for GIFcommit, a
+fictional mutual insurer, in the register of the reference's Life Insurance
+Guide. SIX pages (`index`, `life-insurance`, `term-life`, `whole-life`,
+`guide`, `advisor`), Vite entries with plain links. `src/lib/Page.tsx` is the
+shell; `src/bands/bands.tsx` has `Squares`, the one band component (facts,
+photographs, strips, widgets); `src/lib/plan.ts` and `src/lib/spiral.ts`
+choose each grid; `src/lib/modules.tsx` the flat modules (`Prose`, `Faq`,
+`Quiz`, `Calculator`, `CompareTable`, `Newsletter`, `Jump`, `Credits`);
+`src/lib/widgets.tsx` the cells that answer back; `src/content.ts` and
+`src/prose.ts` every word; `src/sources.ts` where each statistic comes from;
+`src/photos.json` and `src/photos.ts` the photographs. Read
+`docs/program/PROGRAM.md`, then `STUDY-BRIEF.md`, then `README.md`.
+
+Live at https://gregoryedgerton.github.io/golden-grids-study-11-northwestern/;
+pushing to `main` deploys.
+
+## Rules that are not negotiable
+
+- Name the reference page. Substitute every asset. Nothing from the reference
+  site — photography, wordmarks, copy — goes into the repo or the deploy.
+- The library is consumed from npm at its published version. Never link a
+  local checkout. A bug found here is an issue on the library, not a patch.
+- Bands stack; they never nest. No wrapper component over `GoldenGrid` — the
+  study exists to show the real API being used directly.
+- Breakpoints live only in `src/lib/viewport.ts`. Three states, never two.
+- Study tools (`src/lib/tools.tsx`) are the only floating UI. Controls go
+  there, on their own stacking layer; the study's stylesheet never styles them.
+  Grid outlines and band notes are off by default. The panel is HIDDEN by
+  default since 2026-10-07 (`?tools=1` shows it; the g/n/m keys still work):
+  it used to be fixed at the viewport's top-right corner at
+  `z-index: 2147483000`, which is where a drill-down's Close belongs. Until
+  it has a better trigger, nothing is drawn in that corner over an open
+  cell, and an expanded cell's Close sits at the top right of the cell.
+- Expansion (`src/lib/expand.tsx`) is how a slot shows content it cannot hold:
+  the band grows, nothing scrolls inside a box, and the covered content goes
+  inert. Every photograph should be expandable — points of interaction are
+  encouraged, and the picture is the affordance.
+- Media fills a slot with `object-fit: cover`; per-image `object-position` is
+  the escape hatch. Never reshape a band to suit an image.
+- Pass one ends with the asset spec in `README.md` filled in. Do not invent
+  placeholder content and call the study done.
+- No CSS framework, no design system, no routing, no state library, no tests.
+
+## The standard, from Studies 03 and 04
+
+What every study is held to beyond the rules above. These are features and
+the conditions for using them; the content is the study's own, drawn from
+its subject. A study that leaves one out says why in its README.
+
+**Copy is about the subject, never about the grid.** Band titles, lessons,
+captions and standfirsts describe what the reference page is about, in the
+subject's own detail and at paragraph length where there is room. Grid
+geometry (range, placement, which side the hero is on) goes in the hidden
+band `note`, the README's band table and this file. No winks, no stamps, no
+novelty labels, no jokes about the reference or the reader: a plain
+scholarly register, as a professor would write it.
+
+**Where the format carries marketing or account matter, the study carries
+it too.** A streaming home page interleaves rows with a plan banner, reasons
+to join, a price table, a FAQ and a call to action; a listing page has a
+booking card, a host card and policies; an encyclopaedia has a licence and
+an edit history. Rebuild those modules as the reference places them, with
+the study's own copy, straight and plausible, for a fictional service where
+one is needed; a form sends nothing and says so. Flat modules (a FAQ, a
+price table of peers) are lists, not grids.
+
+**Grids run full width, and type fills what content does not.** No width
+caps that leave a band standing in empty ground. When a band has fewer
+things than squares, the remaining squares carry type as a design element,
+a catalogue number, a date, a count, a word from the subject, rather than
+nothing. The type set is one set: body copy, lessons and captions are
+raised to carry as much as the headline, and the fitted line is capped
+(about 120px) so the delta between largest and smallest type stays within
+roughly eight to one. Body copy comes in two lengths and the square's
+height picks one; it is never buried and never cut. (Greg, Study 05.)
+
+**Type fits its square.** Copy slots use `Fact`, `Figure` and `LinkBox` from
+`src/lib/boxes.tsx`: a label, a line of type fitted to the room the square
+leaves it (`src/lib/fit.tsx`, a binary search on font-size), optional body
+copy, a foot. The line's container is `flex: 1 1 0`, a definite box; it
+must never grow with its content, or the fit measures against a box that is
+always big enough (this is what broke in WebKit). Padding is a share of the
+square's side. Nothing is ever cut: labels wrap, body copy is removed whole
+below 240px, in a square under 64px the label goes and the line stays, and
+a formula (`fit--num`) breaks only at its own newlines. A line that does not
+read aloud as written gets a `spoken` form. With web fonts, call
+`useFontsReady` so display type never flashes from the fallback face.
+
+**Depth is in flow, never in a modal.** Every photograph, every card that
+summarises, expands in place (`src/lib/expand.tsx`): the band grows,
+nothing scrolls inside a box, covered content goes inert, focus moves to
+the close control and returns on close. Every drill-down has ONE plain
+way out: a labelled Close (not an icon alone) at the top right of the
+opened container, in a sticky head so it stays reachable, plus Escape; a
+band opened from a row closes the same way. The study tools panel, which
+used to own the viewport's top-right corner, is hidden until it has a
+better trigger (`?tools=1` shows it). The Close is the study's SECONDARY CTA:
+`.cell__close` reads the `--cta2-*` tokens (font, padding, colour, ground,
+border, radius, hover) from `expand.css`, and each study declares those tokens
+once, at the end of `styles.css`, from its own secondary button (the outlined
+box, the grey pill, the ghost button), so the Close always looks like the
+study's other secondary controls and never like the template's. A study with no
+secondary button defines one first. (Greg, Study 07–10.) An item chosen from a row opens its
+own band beneath the row, a new band and never a grid inside a grid, with
+one orientation per item so a row of ten turns through the placements. A
+fact that continues elsewhere carries a section link, and an expanded
+passage lists where it continues. When the reference is several pages, the
+study is several pages (one Vite entry each, plain relative links, no
+router) with a shared shell: contents strip, previous and next.
+
+**Media supports the format.** Where the subject moves, the squares move:
+short clips cut from the source at the moment of the still (`Clip`,
+`src/lib/clip.tsx`), square, silent, looping, playing only while on screen
+and fetched only then, and the whole work loads only on request (`Player`).
+Where the subject is a text, the squares carry original figures drawn from
+the subject's own mathematics or data, inline SVG, in the page's own inks.
+Photographs fill their slot with `object-fit: cover`.
+
+**Both colour schemes, by device preference.** Tokens in `:root` and a
+`prefers-color-scheme` block; every box tone and figure takes its colour
+from the tokens so the whole study follows the device. If the reference has
+one scheme, that scheme is the default and the other is the study's own
+values turned over, and the README says so. Small coloured text (the label)
+gets its own token per scheme so it passes 4.5:1 on each ground.
+
+**Reduced motion is respected, and tested as the device sends it.** The
+rule is `transition: none; animation: none`, never the 0.01ms trick, which
+turns every style write into a transition and breaks anything that
+measures after writing. Clips become their stills; any dial becomes a static
+layout. Verify with the device setting on, not only the tools switch.
+
+**Accessibility is audited, not assumed.** Before publishing run
+`captures/scan.cjs` against the dev server: in Chrome and WebKit, at 390,
+820 and 1440, light and dark, it finds anything overflowing its box, any
+fitted line under 12px, and axe-core violations (WCAG 2.0/2.1/2.2 A and AA,
+best practice) with an expansion open. Then by hand: one `h1`, one `h2` per
+band, landmarks, the skip link first in the tab order (before the tools),
+every control with a distinct accessible name ("More: ⟨title⟩", "Continued
+in section IV, Geometry"), SVGs with `role="img"` and a label that says what
+they show, targets at least 24px, no horizontal scroll at 320px, Enter and
+Escape through every expansion. Write what the scan cannot check in the
+README: the smallest line, and that no screen-reader user has tested it.
+
+## This study's own rules
+
+- GIFcommit is NOT an insurer and the shell says so on every page. Nothing
+  here is insurance, advice or an offer; no form sends anything; the advisor,
+  team, address and telephone number are invented (555-01xx). Never quote a
+  price, a rating, a ranking or a dividend for GIFcommit, and never carry over
+  one of Northwestern Mutual's. The only cost figure is LIMRA's accepted
+  median for a basic term policy, attributed.
+- The words are the study's own, about how life insurance works. Check any
+  claim against a source; statistics come from `src/sources.ts` by key, each
+  square names its source in its foot, and the colophon lists every one drawn
+  on. Do not add a number that has no source.
+- Callouts are statistics set as large type (`fit--display fit--num`), not
+  generic words. A strip or a hero line that could be a number is a number.
+- The register is the Life Insurance Guide's, from measurement
+  (`captures/tokens-guide.json`): white, a deep-blue section bar with a
+  light-blue label and a white title, light-weight 19px body, 2px corners,
+  gold only for rules and the call to action, numbers thin in the deep blue.
+  Source Sans 3 stands in for Guardian Sans. One scheme in the reference; dark
+  is the study's. (The first draft was a French café register built from the
+  home page; Greg rejected it.)
+- GRIDS ARE NOT FORMULAIC. About half the bands skip a range (`from` above 1):
+  the library collapses the smallest squares into one strip filled by the
+  band's LAST child (`strip`). `lib/plan.ts` picks landscape or portrait and
+  the placement from `lib/spiral.ts` (generated from the library's render
+  model) and refuses a skip grid whose smallest square is under 104px or whose
+  strip is under 64×100; below that width the same children fall back into a
+  plain grid and the strip is simply the smallest square. `variant` turns
+  neighbouring bands through the qualifying placements; `quiet` bands put the
+  largest square first. Give every band its own `from`, `variant` and size.
+- Cells carry information or answer back. Body copy is fitted to its square
+  (`fit--body`), so a large square holds large text and no empty ground. Four
+  cells are widgets (`runway`, `costGuess`, `termPicker`, `multiple`); below
+  desktop a widget stands above its grid at full width. Traditional paragraphs
+  (`Prose`, `src/prose.ts`) sit between the grids, with check lists and a panel
+  for one figure; in the guide they sit under each section bar (`prose=`).
+- The icons are the reference's own duotone drawings and interface glyphs,
+  copied from its pages at Greg's request (`src/site-icons`,
+  `captures/icons-scan.cjs`). Never its logo, its award badges (NerdWallet),
+  its app-store badges or its photography.
+- Photographs are Unsplash's (Unsplash License, not Creative Commons), chosen
+  for young families and the buyers of term cover; skip any whose contributor
+  is a brand (Hillshire Farm, Jimmy Dean, Land O'Lakes, DocuSign, Surface)
+  and any with a product on show. Credits are in each footer and
+  `captures/unsplash.tsv`. Unsplash blocks automated browsers: search it in the
+  Browser pane (its pages carry the results server-rendered).
+
+Two geometry rules, verified against source, that every band relies on:
+
+- Parity: with *n* = visible boxes (+1 for a placeholder), `right`/`left` are
+  landscape only when *n* is even; `top`/`bottom` only when *n* is odd.
+- Hero side: the largest box sits on the `placement` side turned *n − 2*
+  quarter-turns in the spiral's direction (opposite at 4, one step at 3).
+
+## API facts, verified against 5.0.0 source
+
+- `GoldenGrid` props: `from` (1), `to` (4), `color`, `outline`, `clockwise`
+  (true), `placement` (`"right"` | `"bottom"` | `"left"` | `"top"`), `children`.
+- `GoldenBox` children map largest slot → smallest. Extra children are ignored.
+- When `from > 1`, the skipped positions collapse into one placeholder slot,
+  rendered first in the DOM and filled by the **last** `GoldenBox` child.
+- Structural CSS is auto-injected. `GoldenBox` renders a 100%×100%
+  `position: relative` div and nothing else; it accepts `className` and
+  `style`. All visual styling is ours.
+- Only direct `GoldenBox` children count; a wrapper component or fragment is
+  dropped silently. `from={2}` skips position 1 alone:
+  a 1×1 placeholder, rendered first, filled by the last child, raw base colour.
+  Same rectangles as `from={1}`, different child mapping and colours. `from === to === 1`
+  is `single`: one box, later children ignored.
+- DOM order is placeholder first, then slots smallest to largest: the hero is
+  the last element.
+- There is no dial in this study.
+
+## Commands
+
+```bash
+npm install
+npm run dev       # Vite dev server
+npm run build     # tsc -b && vite build → dist/
+npm run preview
+```
+
+Pushing to `main` deploys to GitHub Pages via `.github/workflows/pages.yml`.
+Base path derives from `GITHUB_REPOSITORY`; do not hard-code it.
+
+## Sandbox constraints
+
+The library README links this repo as its "try it without installing" path,
+opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/golden-grids-study-template`.
+
+- **Vite stays on 7.x.** Vite 8 depends on rolldown, whose WebContainer
+  binding is a wasm download fetched at first run under an experimental WASI
+  runtime. It made the sandbox slow and fragile. Do not bump to 8 without
+  loading the StackBlitz link afterwards and watching it reach `VITE ready`.
+- `.stackblitzrc` pins install and start so the importer does not guess.
+- Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
+  start in testing. The classic `/github/` importer accepts `?file=` but waits
+  on a WebSocket and can stall at "Cloning repo from GitHub".

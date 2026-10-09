@@ -1,0 +1,438 @@
+{
+ "tiles": [
+  {
+   "text": "When to revisit your life insurance cove",
+   "x": 24,
+   "y": 1289,
+   "w": 342,
+   "h": 89
+  },
+  {
+   "text": "Annually renewable term life insurance A",
+   "x": 16,
+   "y": 3343,
+   "w": 358,
+   "h": 263
+  },
+  {
+   "text": "Level term life insurance Level term lif",
+   "x": 16,
+   "y": 3614,
+   "w": 358,
+   "h": 195
+  },
+  {
+   "text": "Whole life insurance Whole life insuranc",
+   "x": 16,
+   "y": 3889,
+   "w": 358,
+   "h": 218
+  },
+  {
+   "text": "Universal life insurance Universal life ",
+   "x": 16,
+   "y": 4115,
+   "w": 358,
+   "h": 240
+  },
+  {
+   "text": "Variable Universal Life Insurance Variab",
+   "x": 16,
+   "y": 4363,
+   "w": 358,
+   "h": 240
+  },
+  {
+   "text": "Loan You borrow money from the life insu",
+   "x": 16,
+   "y": 7327,
+   "w": 171,
+   "h": 372
+  },
+  {
+   "text": "Partial Surrender You give up a portion ",
+   "x": 199,
+   "y": 7327,
+   "w": 171,
+   "h": 372
+  },
+  {
+   "text": "Total Surrender You give up your life in",
+   "x": 16,
+   "y": 7711,
+   "w": 171,
+   "h": 347
+  },
+  {
+   "text": "Cash Value ‘A Godsend’ for Indiana PPE D",
+   "x": 16,
+   "y": 8924,
+   "w": 358,
+   "h": 191
+  },
+  {
+   "text": "Getting married Combining your lives is ",
+   "x": 16,
+   "y": 12229,
+   "w": 358,
+   "h": 107
+  },
+  {
+   "text": "Starting or growing a family When you ha",
+   "x": 16,
+   "y": 12344,
+   "w": 358,
+   "h": 107
+  },
+  {
+   "text": "Buying a house A home — more specificall",
+   "x": 16,
+   "y": 12458,
+   "w": 358,
+   "h": 107
+  },
+  {
+   "text": "Starting a business It’s not uncommon fo",
+   "x": 16,
+   "y": 12573,
+   "w": 358,
+   "h": 129
+  },
+  {
+   "text": "Supporting aging parents If your parents",
+   "x": 16,
+   "y": 12710,
+   "w": 358,
+   "h": 84
+  },
+  {
+   "text": "Taking out a student loan If someone co-",
+   "x": 16,
+   "y": 12802,
+   "w": 358,
+   "h": 152
+  },
+  {
+   "text": "7 Events That Increase Your Need for Lif",
+   "x": 16,
+   "y": 13016,
+   "w": 358,
+   "h": 191
+  },
+  {
+   "text": "Basic life insurance If offered, basic l",
+   "x": 32,
+   "y": 13616,
+   "w": 342,
+   "h": 259
+  },
+  {
+   "text": "Supplemental life insurance This is some",
+   "x": 32,
+   "y": 13883,
+   "w": 342,
+   "h": 191
+  },
+  {
+   "text": "I already have other assets I can leave ",
+   "x": 16,
+   "y": 14695,
+   "w": 171,
+   "h": 246
+  },
+  {
+   "text": "What types of costs can life insurance c",
+   "x": 199,
+   "y": 14695,
+   "w": 171,
+   "h": 246
+  },
+  {
+   "text": "Does it make sense for me to go with ter",
+   "x": 16,
+   "y": 14953,
+   "w": 171,
+   "h": 246
+  },
+  {
+   "text": "What options do I have for changing my c",
+   "x": 199,
+   "y": 14953,
+   "w": 171,
+   "h": 246
+  },
+  {
+   "text": "What can I use cash value for in the fut",
+   "x": 16,
+   "y": 15210,
+   "w": 171,
+   "h": 223
+  },
+  {
+   "text": "How many beneficiaries can I designate o",
+   "x": 199,
+   "y": 15210,
+   "w": 171,
+   "h": 223
+  },
+  {
+   "text": "MANAGING FINANCES What Is Financial Plan",
+   "x": 16,
+   "y": 16634,
+   "w": 358,
+   "h": 324
+  },
+  {
+   "text": "YOUR RETIREMENT How to Make Your Money L",
+   "x": 16,
+   "y": 16982,
+   "w": 358,
+   "h": 350
+  },
+  {
+   "text": "YOUR FINANCIAL PLAN Financial Advisor Fe",
+   "x": 16,
+   "y": 17356,
+   "w": 358,
+   "h": 366
+  }
+ ],
+ "url": "https://www.northwesternmutual.com/life-and-money/life-insurance-guide/",
+ "title": "Life Insurance Guide | Northwestern Mutual",
+ "width": 390,
+ "height": 19448,
+ "headings": [
+  {
+   "tag": "H1",
+   "text": "Life Insurance Guide",
+   "x": 24,
+   "y": 73,
+   "w": 219,
+   "h": 24
+  },
+  {
+   "tag": "H2",
+   "text": "What's in our life insurance guide",
+   "x": 44,
+   "y": 802,
+   "w": 302,
+   "h": 42
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 01 What is life insurance?",
+   "x": 16,
+   "y": 1356,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 02 Different types of life insurance",
+   "x": 16,
+   "y": 3028,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H2",
+   "text": "Term Life Insurance",
+   "x": 16,
+   "y": 3295,
+   "w": 358,
+   "h": 29
+  },
+  {
+   "tag": "H2",
+   "text": "Permanent Life Insurance",
+   "x": 16,
+   "y": 3841,
+   "w": 358,
+   "h": 29
+  },
+  {
+   "tag": "H3",
+   "text": "Converting life insurance",
+   "x": 16,
+   "y": 4635,
+   "w": 358,
+   "h": 29
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 03 How much life insurance do I need?",
+   "x": 16,
+   "y": 5538,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 04 What is life insurance cash value?",
+   "x": 16,
+   "y": 6730,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H3",
+   "text": "Using life insurance cash value in retirement",
+   "x": 16,
+   "y": 9147,
+   "w": 358,
+   "h": 57
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 05 How life insurance dividends work",
+   "x": 16,
+   "y": 10009,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H2",
+   "text": "Here’s how you can use your dividend",
+   "x": 16,
+   "y": 10921,
+   "w": 358,
+   "h": 29
+  },
+  {
+   "tag": "H2",
+   "text": "QUIZ: PREPARING FOR THE UNEXPECTED: CHECK HOW MUCH YOU KNOW ABOUT LIFE INSURANCE",
+   "x": 17,
+   "y": 11109,
+   "w": 356,
+   "h": 84
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 06 When to revisit your life insurance coverage",
+   "x": 16,
+   "y": 11736,
+   "w": 358,
+   "h": 83
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 07 Where to get life insurance",
+   "x": 16,
+   "y": 13283,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H3",
+   "text": "Group life insurance through work",
+   "x": 16,
+   "y": 13382,
+   "w": 358,
+   "h": 29
+  },
+  {
+   "tag": "H3",
+   "text": "Individual life insurance",
+   "x": 16,
+   "y": 14273,
+   "w": 358,
+   "h": 29
+  },
+  {
+   "tag": "H2",
+   "text": "SECTION 08 Conversation starters with an advisor",
+   "x": 16,
+   "y": 14596,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H3",
+   "text": "Find What You're Looking for at Northwestern Mutual",
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 56
+  },
+  {
+   "tag": "H2",
+   "text": "Notice, Consent and Right to Opt Out",
+   "x": 20,
+   "y": 557,
+   "w": 312,
+   "h": 19
+  }
+ ],
+ "images": [
+  {
+   "alt": "Family who needs the life insurance guid",
+   "x": 0,
+   "y": 230,
+   "w": 390,
+   "h": 293
+  },
+  {
+   "alt": "Couple outside a home thinking about con",
+   "x": 16,
+   "y": 4680,
+   "w": 358,
+   "h": 201
+  },
+  {
+   "alt": "The warehouse at RPD headquarters in Gre",
+   "x": 247,
+   "y": 8948,
+   "w": 103,
+   "h": 58
+  },
+  {
+   "alt": "Mom working on a laptop with her baby de",
+   "x": 16,
+   "y": 11867,
+   "w": 358,
+   "h": 201
+  },
+  {
+   "alt": "Events that increase your need for life ",
+   "x": 247,
+   "y": 13040,
+   "w": 103,
+   "h": 58
+  },
+  {
+   "alt": "Left Dotted Pattern",
+   "x": 3,
+   "y": 16026,
+   "w": 544,
+   "h": 224
+  },
+  {
+   "alt": "Right Dotted Pattern",
+   "x": 0,
+   "y": 15763,
+   "w": 390,
+   "h": 223
+  },
+  {
+   "alt": "What is financial planning family playin",
+   "x": 16,
+   "y": 16634,
+   "w": 358,
+   "h": 201
+  },
+  {
+   "alt": "Happy couple with their child talking ab",
+   "x": 16,
+   "y": 16982,
+   "w": 358,
+   "h": 201
+  },
+  {
+   "alt": "Meeting, women and business people with ",
+   "x": 16,
+   "y": 17356,
+   "w": 358,
+   "h": 201
+  }
+ ]
+}

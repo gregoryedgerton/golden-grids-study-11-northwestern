@@ -1,0 +1,328 @@
+{
+ "tiles": [],
+ "url": "https://www.northwesternmutual.com/life-insurance/term-life-insurance/",
+ "title": "Term Life Insurance | Northwestern Mutual",
+ "width": 390,
+ "height": 10430,
+ "headings": [
+  {
+   "tag": "H1",
+   "text": "TERM LIFE INSURANCE",
+   "x": 16,
+   "y": 332,
+   "w": 358,
+   "h": 34
+  },
+  {
+   "tag": "H2",
+   "text": "Protection on your terms.",
+   "x": 16,
+   "y": 366,
+   "w": 358,
+   "h": 68
+  },
+  {
+   "tag": "H2",
+   "text": "The right time in your life for term life.",
+   "x": 16,
+   "y": 693,
+   "w": 362,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Less than $1 a day",
+   "x": 48,
+   "y": 931,
+   "w": 298,
+   "h": 141
+  },
+  {
+   "tag": "H2",
+   "text": "Term life coverage that fits your life.",
+   "x": 16,
+   "y": 1362,
+   "w": 358,
+   "h": 52
+  },
+  {
+   "tag": "H3",
+   "text": "It's affordable",
+   "x": 44,
+   "y": 1489,
+   "w": 302,
+   "h": 37
+  },
+  {
+   "tag": "H3",
+   "text": "It's yours",
+   "x": 44,
+   "y": 1726,
+   "w": 302,
+   "h": 37
+  },
+  {
+   "tag": "H3",
+   "text": "It's flexible",
+   "x": 44,
+   "y": 1985,
+   "w": 302,
+   "h": 37
+  },
+  {
+   "tag": "H2",
+   "text": "Life Insurance Calculator",
+   "x": 80,
+   "y": 2437,
+   "w": 229,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "Questions about term life insurance? We've got answers.",
+   "x": 16,
+   "y": 2659,
+   "w": 358,
+   "h": 72
+  },
+  {
+   "tag": "H3",
+   "text": "What is term life insurance?",
+   "x": 40,
+   "y": 2771,
+   "w": 264,
+   "h": 31
+  },
+  {
+   "tag": "H3",
+   "text": "How long does term life insurance last?",
+   "x": 40,
+   "y": 2866,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "How much does term life insurance cost?",
+   "x": 40,
+   "y": 2986,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "Will my premiums stay the same or increase each year?",
+   "x": 40,
+   "y": 3106,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What happens if I outlive my term life insurance?",
+   "x": 40,
+   "y": 3226,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "Isn't work coverage enough?",
+   "x": 40,
+   "y": 3346,
+   "w": 264,
+   "h": 31
+  },
+  {
+   "tag": "H3",
+   "text": "What are the pros and cons of term life insurance vs. whole life insurance?",
+   "x": 40,
+   "y": 3441,
+   "w": 264,
+   "h": 81
+  },
+  {
+   "tag": "H3",
+   "text": "What does decreasing term mean in life insurance?",
+   "x": 40,
+   "y": 3586,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What does level term mean in life insurance?",
+   "x": 40,
+   "y": 3706,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "Does term life insurance have cash value?",
+   "x": 40,
+   "y": 3826,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What are the tax implications of term life insurance?",
+   "x": 40,
+   "y": 3946,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What riders are available for term insurance?",
+   "x": 40,
+   "y": 4066,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What is term conversion?",
+   "x": 40,
+   "y": 4186,
+   "w": 264,
+   "h": 31
+  },
+  {
+   "tag": "H2",
+   "text": "Find out the differences between whole and term life insurance",
+   "x": 16,
+   "y": 4357,
+   "w": 358,
+   "h": 56
+  },
+  {
+   "tag": "H2",
+   "text": "Get matched with a financial advisor in four easy steps.",
+   "x": 28,
+   "y": 4839,
+   "w": 334,
+   "h": 80
+  },
+  {
+   "tag": "H2",
+   "text": "The Northwestern Mutual difference",
+   "x": 16,
+   "y": 5211,
+   "w": 358,
+   "h": 68
+  },
+  {
+   "tag": "H3",
+   "text": "97% of our clients stay with us year over year",
+   "x": 16,
+   "y": 5295,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "No. 1 direct provider of individual life insurance in the U.S.",
+   "x": 16,
+   "y": 5459,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "AAA financial strength rating",
+   "x": 16,
+   "y": 5623,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H2",
+   "text": "How much do you know about life insurance?",
+   "x": 76,
+   "y": 6082,
+   "w": 238,
+   "h": 80
+  },
+  {
+   "tag": "H2",
+   "text": "Boost your term life insurance knowledge",
+   "x": 16,
+   "y": 6357,
+   "w": 358,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "What Is the Cost of Term Life Insurance?",
+   "x": -310,
+   "y": 6675,
+   "w": 278,
+   "h": 94
+  },
+  {
+   "tag": "H3",
+   "text": "Life Insurance Guide",
+   "x": 56,
+   "y": 6637,
+   "w": 278,
+   "h": 71
+  },
+  {
+   "tag": "H3",
+   "text": "Life Insurance Calculator",
+   "x": 422,
+   "y": 6637,
+   "w": 278,
+   "h": 71
+  },
+  {
+   "tag": "H2",
+   "text": "Ready to take the next step?",
+   "x": 16,
+   "y": 7205,
+   "w": 358,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Find What You're Looking for at Northwestern Mutual",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 25
+  },
+  {
+   "tag": "H2",
+   "text": "Notice, Consent and Right to Opt Out",
+   "x": 20,
+   "y": 557,
+   "w": 306,
+   "h": 19
+  }
+ ],
+ "images": [
+  {
+   "alt": "Picture of a financial representative",
+   "x": 85,
+   "y": 6961,
+   "w": 220,
+   "h": 220
+  },
+  {
+   "alt": "Download on the App Store",
+   "x": 63,
+   "y": 9817,
+   "w": 120,
+   "h": 40
+  },
+  {
+   "alt": "Get it on Google Play",
+   "x": 182,
+   "y": 9807,
+   "w": 155,
+   "h": 60
+  }
+ ]
+}

@@ -1,0 +1,390 @@
+{
+ "tiles": [],
+ "url": "https://www.northwesternmutual.com/life-insurance/",
+ "title": "Life Insurance: Get a Quote Today | Northwestern Mutual",
+ "width": 820,
+ "height": 10784,
+ "headings": [
+  {
+   "tag": "H1",
+   "text": "LIFE INSURANCE",
+   "x": 16,
+   "y": 135,
+   "w": 378,
+   "h": 38
+  },
+  {
+   "tag": "H2",
+   "text": "Let's protect the ones you love.",
+   "x": 16,
+   "y": 173,
+   "w": 378,
+   "h": 142
+  },
+  {
+   "tag": "H2",
+   "text": "Your life insurance will be designed around your life.",
+   "x": 86,
+   "y": 676,
+   "w": 647,
+   "h": 96
+  },
+  {
+   "tag": "H2",
+   "text": "Life Insurance Calculator",
+   "x": 414,
+   "y": 1125,
+   "w": 334,
+   "h": 56
+  },
+  {
+   "tag": "H2",
+   "text": "Let's talk about why life insurance is so important.",
+   "x": 153,
+   "y": 1397,
+   "w": 515,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "What's life insurance, exactly?",
+   "x": 44,
+   "y": 1592,
+   "w": 334,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Why do I need a life insurance policy?",
+   "x": 442,
+   "y": 1592,
+   "w": 334,
+   "h": 76
+  },
+  {
+   "tag": "H3",
+   "text": "Isn't life insurance through my work enough?",
+   "x": 44,
+   "y": 2008,
+   "w": 334,
+   "h": 76
+  },
+  {
+   "tag": "H3",
+   "text": "What if I need a life insurance policy fast?",
+   "x": 442,
+   "y": 2008,
+   "w": 334,
+   "h": 76
+  },
+  {
+   "tag": "H2",
+   "text": "How much does life insurance cost?",
+   "x": 426,
+   "y": 2399,
+   "w": 374,
+   "h": 96
+  },
+  {
+   "tag": "H2",
+   "text": "We have many types of life insurance policies to choose from",
+   "x": 20,
+   "y": 2939,
+   "w": 780,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "Whole life insurance",
+   "x": 44,
+   "y": 3099,
+   "w": 198,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Universal life insurance",
+   "x": 442,
+   "y": 3099,
+   "w": 228,
+   "h": 40
+  },
+  {
+   "tag": "H3",
+   "text": "Variable universal life insurance",
+   "x": 44,
+   "y": 3562,
+   "w": 245,
+   "h": 68
+  },
+  {
+   "tag": "H3",
+   "text": "Term life insurance",
+   "x": 442,
+   "y": 3562,
+   "w": 185,
+   "h": 40
+  },
+  {
+   "tag": "H2",
+   "text": "What everyone should know about life insurance",
+   "x": 193,
+   "y": 4177,
+   "w": 435,
+   "h": 118
+  },
+  {
+   "tag": "H2",
+   "text": "Get financial tips, tools, and more with our monthly Life & Money newsletter.",
+   "x": 131,
+   "y": 4485,
+   "w": 557,
+   "h": 72
+  },
+  {
+   "tag": "H2",
+   "text": "Questions about life insurance? We've got answers.",
+   "x": 153,
+   "y": 4855,
+   "w": 515,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "How much life insurance do you need?",
+   "x": 110,
+   "y": 4991,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "How do I get a life insurance quote?",
+   "x": 110,
+   "y": 5093,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What are the different types of life insurance?",
+   "x": 110,
+   "y": 5195,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "How does permanent life insurance work?",
+   "x": 110,
+   "y": 5297,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "How does term life insurance work?",
+   "x": 110,
+   "y": 5399,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Can a life insurance policy earn money?",
+   "x": 110,
+   "y": 5501,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Is life insurance taxable?",
+   "x": 110,
+   "y": 5603,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What is the best life insurance to get?",
+   "x": 110,
+   "y": 5705,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Should I get term or permanent life insurance?",
+   "x": 110,
+   "y": 5807,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What are the best life insurance policies for young adults?",
+   "x": 110,
+   "y": 5909,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "How does life insurance work during retirement?",
+   "x": 110,
+   "y": 6043,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "How do I get a life insurance policy?",
+   "x": 110,
+   "y": 6145,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What insurance riders does Northwestern Mutual offer?",
+   "x": 110,
+   "y": 6247,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "How can life insurance help with estate planning?",
+   "x": 110,
+   "y": 6381,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H2",
+   "text": "Your financial strength, powered by ours.",
+   "x": 20,
+   "y": 6563,
+   "w": 780,
+   "h": 80
+  },
+  {
+   "tag": "H3",
+   "text": "No. 1 ranked insurance company for consumer experience",
+   "x": 40,
+   "y": 6659,
+   "w": 209,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "AAA financial strength rating",
+   "x": 305,
+   "y": 6659,
+   "w": 209,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "$9.2B in dividends expected to be paid in 2026",
+   "x": 571,
+   "y": 6659,
+   "w": 209,
+   "h": 60
+  },
+  {
+   "tag": "H2",
+   "text": "Let's boost your life insurance knowledge",
+   "x": 153,
+   "y": 7048,
+   "w": 515,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "Life Insurance Guide",
+   "x": 52,
+   "y": 7392,
+   "w": 318,
+   "h": 92
+  },
+  {
+   "tag": "H3",
+   "text": "Life Insurance Calculator",
+   "x": 450,
+   "y": 7392,
+   "w": 318,
+   "h": 92
+  },
+  {
+   "tag": "H3",
+   "text": "Term Life Insurance vs. Whole Life Insurance",
+   "x": 52,
+   "y": 7872,
+   "w": 318,
+   "h": 120
+  },
+  {
+   "tag": "H2",
+   "text": "Now you're ready for a life insurance quote.",
+   "x": 293,
+   "y": 8152,
+   "w": 507,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "Find What You're Looking for at Northwestern Mutual",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Notice, Consent and Right to Opt Out",
+   "x": 16,
+   "y": 700,
+   "w": 306,
+   "h": 25
+  }
+ ],
+ "images": [
+  {
+   "alt": "A man leaning on a porch railing, lookin",
+   "x": 20,
+   "y": 2399,
+   "w": 374,
+   "h": 269
+  },
+  {
+   "alt": "Picture of a financial representative",
+   "x": 25,
+   "y": 8152,
+   "w": 220,
+   "h": 220
+  },
+  {
+   "alt": "Download on the App Store",
+   "x": 418,
+   "y": 10002,
+   "w": 135,
+   "h": 45
+  },
+  {
+   "alt": "Get it on Google Play",
+   "x": 408,
+   "y": 10047,
+   "w": 154,
+   "h": 60
+  },
+  {
+   "alt": "Northwestern Mutual app QR Code",
+   "x": 585,
+   "y": 9987,
+   "w": 125,
+   "h": 125
+  }
+ ]
+}

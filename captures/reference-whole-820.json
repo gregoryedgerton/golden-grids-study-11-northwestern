@@ -1,0 +1,389 @@
+{
+ "tiles": [],
+ "url": "https://www.northwesternmutual.com/life-insurance/whole-life-insurance/",
+ "title": "Whole Life Insurance | Northwestern Mutual",
+ "width": 820,
+ "height": 11149,
+ "headings": [
+  {
+   "tag": "H1",
+   "text": "WHOLE LIFE INSURANCE",
+   "x": 16,
+   "y": 135,
+   "w": 378,
+   "h": 38
+  },
+  {
+   "tag": "H2",
+   "text": "Let's protect your (whole) life.",
+   "x": 16,
+   "y": 173,
+   "w": 378,
+   "h": 142
+  },
+  {
+   "tag": "H2",
+   "text": "What is whole life insurance?",
+   "x": 20,
+   "y": 618,
+   "w": 360,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "No. 1",
+   "x": 476,
+   "y": 666,
+   "w": 266,
+   "h": 89
+  },
+  {
+   "tag": "H2",
+   "text": "Your whole life insurance policy highlights",
+   "x": 153,
+   "y": 1248,
+   "w": 515,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "Guaranteed payout",
+   "x": 44,
+   "y": 1443,
+   "w": 334,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Costs are set",
+   "x": 442,
+   "y": 1443,
+   "w": 334,
+   "h": 44
+  },
+  {
+   "tag": "H3",
+   "text": "Accumulates cash value",
+   "x": 44,
+   "y": 1740,
+   "w": 334,
+   "h": 44
+  },
+  {
+   "tag": "H2",
+   "text": "Life Insurance Calculator",
+   "x": 414,
+   "y": 2132,
+   "w": 334,
+   "h": 56
+  },
+  {
+   "tag": "H2",
+   "text": "How much will your whole life insurance cost?",
+   "x": 20,
+   "y": 2396,
+   "w": 374,
+   "h": 96
+  },
+  {
+   "tag": "H2",
+   "text": "Which type of life insurance is best for you? Compare them.",
+   "x": 86,
+   "y": 3074,
+   "w": 647,
+   "h": 120
+  },
+  {
+   "tag": "H2",
+   "text": "Find out the differences between whole and term life insurance",
+   "x": 193,
+   "y": 3954,
+   "w": 435,
+   "h": 161
+  },
+  {
+   "tag": "H2",
+   "text": "Questions about whole life insurance? We've got answers.",
+   "x": 86,
+   "y": 4272,
+   "w": 647,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "What is the cash value of whole life insurance?",
+   "x": 110,
+   "y": 4408,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "How does whole life insurance cash value grow?",
+   "x": 110,
+   "y": 4510,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "How does whole life insurance work?",
+   "x": 110,
+   "y": 4612,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What does whole life insurance do?",
+   "x": 110,
+   "y": 4714,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Can you cash out whole life insurance?",
+   "x": 110,
+   "y": 4816,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What are the benefits of whole life insurance?",
+   "x": 110,
+   "y": 4918,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Who should consider whole life insurance?",
+   "x": 110,
+   "y": 5020,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Should families with young children consider whole life insurance?",
+   "x": 110,
+   "y": 5122,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "Is whole life insurance a good investment?",
+   "x": 110,
+   "y": 5256,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Is whole life insurance worth it?",
+   "x": 110,
+   "y": 5358,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Which is better: term life insurance or whole life insurance?",
+   "x": 110,
+   "y": 5460,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "Does whole life insurance earn dividends?",
+   "x": 110,
+   "y": 5594,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "What optional insurance riders does Northwestern Mutual offer?",
+   "x": 110,
+   "y": 5696,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "Is whole life insurance the same thing as full life?",
+   "x": 110,
+   "y": 5830,
+   "w": 553,
+   "h": 38
+  },
+  {
+   "tag": "H3",
+   "text": "Can a whole life insurance policy be converted to term?",
+   "x": 110,
+   "y": 5932,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "How can whole life insurance help with estate planning?",
+   "x": 110,
+   "y": 6066,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H3",
+   "text": "What are the tax implications of whole life insurance?",
+   "x": 110,
+   "y": 6200,
+   "w": 553,
+   "h": 70
+  },
+  {
+   "tag": "H2",
+   "text": "Get financial tips, tools, and more with our monthly Life & Money newsletter.",
+   "x": 131,
+   "y": 6426,
+   "w": 557,
+   "h": 72
+  },
+  {
+   "tag": "H2",
+   "text": "Your financial strength, powered by ours.",
+   "x": 20,
+   "y": 6796,
+   "w": 780,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "Top 10 ranked investment service",
+   "x": 40,
+   "y": 6966,
+   "w": 209,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "$9.2B in dividends expected to be paid in 2026",
+   "x": 305,
+   "y": 6966,
+   "w": 209,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "AAA financial strength rating",
+   "x": 571,
+   "y": 6966,
+   "w": 209,
+   "h": 60
+  },
+  {
+   "tag": "H2",
+   "text": "Let's boost your whole life insurance knowledge",
+   "x": 153,
+   "y": 7355,
+   "w": 515,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "Whole Life Insurance Pros and Cons",
+   "x": 52,
+   "y": 7739,
+   "w": 318,
+   "h": 120
+  },
+  {
+   "tag": "H3",
+   "text": "Life Insurance Calculator",
+   "x": 450,
+   "y": 7699,
+   "w": 318,
+   "h": 92
+  },
+  {
+   "tag": "H3",
+   "text": "Life Insurance Guide",
+   "x": 52,
+   "y": 8139,
+   "w": 318,
+   "h": 92
+  },
+  {
+   "tag": "H2",
+   "text": "Now you're ready for the best life insurance option for you.",
+   "x": 293,
+   "y": 8459,
+   "w": 507,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "Find What You're Looking for at Northwestern Mutual",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 32
+  },
+  {
+   "tag": "H2",
+   "text": "Notice, Consent and Right to Opt Out",
+   "x": 16,
+   "y": 700,
+   "w": 306,
+   "h": 25
+  }
+ ],
+ "images": [
+  {
+   "alt": "NerdWallet logo",
+   "x": 544,
+   "y": 823,
+   "w": 130,
+   "h": 21
+  },
+  {
+   "alt": "A happy couple shaking hands with a fina",
+   "x": 426,
+   "y": 2396,
+   "w": 374,
+   "h": 306
+  },
+  {
+   "alt": "Picture of a financial representative",
+   "x": 25,
+   "y": 8459,
+   "w": 220,
+   "h": 220
+  },
+  {
+   "alt": "Download on the App Store",
+   "x": 418,
+   "y": 10367,
+   "w": 135,
+   "h": 45
+  },
+  {
+   "alt": "Get it on Google Play",
+   "x": 408,
+   "y": 10412,
+   "w": 154,
+   "h": 60
+  },
+  {
+   "alt": "Northwestern Mutual app QR Code",
+   "x": 585,
+   "y": 10352,
+   "w": 125,
+   "h": 125
+  }
+ ]
+}

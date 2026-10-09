@@ -1,0 +1,237 @@
+{
+ "tiles": [],
+ "url": "https://www.northwesternmutual.com/",
+ "title": "Northwestern Mutual | Financial Planning & Life Insurance Company",
+ "width": 390,
+ "height": 7875,
+ "headings": [
+  {
+   "tag": "H1",
+   "text": "Welcome to A BETTER WAY TO MONEY®",
+   "x": 31,
+   "y": 240,
+   "w": 328,
+   "h": 125
+  },
+  {
+   "tag": "H2",
+   "text": "Northwestern Mutual Primary Products",
+   "x": 0,
+   "y": 536,
+   "w": 1,
+   "h": 28
+  },
+  {
+   "tag": "H3",
+   "text": "Northwestern Mutual Financial Planning Products",
+   "x": 0,
+   "y": 536,
+   "w": 1,
+   "h": 25
+  },
+  {
+   "tag": "H2",
+   "text": "YOUR NORTHWESTERN MUTUAL ADVISOR IS HERE TO GUIDE YOU.",
+   "x": 16,
+   "y": 1220,
+   "w": 358,
+   "h": 96
+  },
+  {
+   "tag": "H2",
+   "text": "WHAT A BETTER WAY TO MONEY® MEANS FOR YOU.",
+   "x": 16,
+   "y": 1742,
+   "w": 358,
+   "h": 96
+  },
+  {
+   "tag": "H3",
+   "text": "Better conversations",
+   "x": 104,
+   "y": 1838,
+   "w": 275,
+   "h": 37
+  },
+  {
+   "tag": "H3",
+   "text": "Better solutions",
+   "x": 104,
+   "y": 2124,
+   "w": 275,
+   "h": 37
+  },
+  {
+   "tag": "H3",
+   "text": "Better outcomes",
+   "x": 104,
+   "y": 2387,
+   "w": 275,
+   "h": 37
+  },
+  {
+   "tag": "H2",
+   "text": "Get financial tips, tools, and more with our monthly Life & Money newsletter.",
+   "x": 67,
+   "y": 2758,
+   "w": 255,
+   "h": 85
+  },
+  {
+   "tag": "H2",
+   "text": "YOUR FINANCIAL STRENGTH, POWERED BY OURS.",
+   "x": 16,
+   "y": 3269,
+   "w": 358,
+   "h": 65
+  },
+  {
+   "tag": "H3",
+   "text": "AAA financial strength rating",
+   "x": 16,
+   "y": 3350,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "Top 10 ranked investment service",
+   "x": 16,
+   "y": 3537,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "$9.2B in dividends expected to be paid in 2026",
+   "x": 16,
+   "y": 3701,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H3",
+   "text": "No. 1 ranked insurance company for consumer experience",
+   "x": 16,
+   "y": 3842,
+   "w": 358,
+   "h": 60
+  },
+  {
+   "tag": "H2",
+   "text": "QUESTIONS ABOUT NORTHWESTERN MUTUAL? WE'VE GOT ANSWERS.",
+   "x": 16,
+   "y": 4098,
+   "w": 358,
+   "h": 100
+  },
+  {
+   "tag": "H3",
+   "text": "How much can I expect to pay for your products and services?",
+   "x": 40,
+   "y": 4238,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "How is Northwestern Mutual different from others?",
+   "x": 40,
+   "y": 4358,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What products and services does Northwestern Mutual offer?",
+   "x": 40,
+   "y": 4478,
+   "w": 264,
+   "h": 81
+  },
+  {
+   "tag": "H3",
+   "text": "How can a financial advisor help me?",
+   "x": 40,
+   "y": 4623,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H3",
+   "text": "What is a financial plan, exactly?",
+   "x": 40,
+   "y": 4743,
+   "w": 264,
+   "h": 56
+  },
+  {
+   "tag": "H2",
+   "text": "Ready to feel better about your money?",
+   "x": 16,
+   "y": 4973,
+   "w": 358,
+   "h": 72
+  },
+  {
+   "tag": "H3",
+   "text": "Find What You're Looking for at Northwestern Mutual",
+   "x": 0,
+   "y": 0,
+   "w": 1,
+   "h": 25
+  },
+  {
+   "tag": "H2",
+   "text": "Notice, Consent and Right to Opt Out",
+   "x": 20,
+   "y": 557,
+   "w": 306,
+   "h": 19
+  }
+ ],
+ "images": [
+  {
+   "alt": "A Northwestern Mutual Financial Advisor",
+   "x": 115,
+   "y": 1036,
+   "w": 160,
+   "h": 160
+  },
+  {
+   "alt": "Northwestern Mutual Financial Advisor Le",
+   "x": 17,
+   "y": 1838,
+   "w": 72,
+   "h": 72
+  },
+  {
+   "alt": "A tablet device displaying a Northwester",
+   "x": 17,
+   "y": 2124,
+   "w": 72,
+   "h": 72
+  },
+  {
+   "alt": "A father holding his child and kissing t",
+   "x": 17,
+   "y": 2387,
+   "w": 72,
+   "h": 72
+  },
+  {
+   "alt": "Download on the App Store",
+   "x": 63,
+   "y": 7262,
+   "w": 120,
+   "h": 40
+  },
+  {
+   "alt": "Get it on Google Play",
+   "x": 182,
+   "y": 7252,
+   "w": 155,
+   "h": 60
+  }
+ ]
+}
