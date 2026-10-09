@@ -46,14 +46,9 @@ stands in for Guardian Sans. The reference has one scheme; the dark one is the
 study's. (A first draft took the home page's serif-and-awning look and was
 rejected.)
 
-## The claim
+## Approach
 
-A product page lists its facts at one size and lets the page's length carry
-the hierarchy; here each module is one grid, the first square the hero, and
-the grids are not all the same grid. About half skip a range: from 2, 3 or 4 the
-library collapses the smaller squares into one strip, so a band is a run of
-larger squares with a short wide figure at its corner, and the shape and the
-side the lead sits on change from band to band.
+The reference lists a product's facts at one size down a long page, with a deep-blue section bar over each part of its guide. The study sets each module as one grid with a largest square. About half the bands skip a range (from 2, 3 or 4), where the library collapses the smaller squares into one strip, so the shape of the grid and the side the largest square sits on change from band to band.
 
 ## The pages
 
@@ -231,22 +226,23 @@ group cover included. No premium is shown and there is no contact form:
 nothing entered is stored or sent, and a scripted run through the steps at
 three widths made no request other than a GET.
 
-## What did not
+## Notes for review
 
-- The icons are Northwestern Mutual's own drawings, used at the author's
-  request; their licence for reuse is not known.
-- The skip grids need about 1100px. At phone and tablet width the same content
-  is a plain grid, so the irregularity is a desktop property.
-- The SSA, NAR, Brookings, NOLHGA and LIMRA sales figures were confirmed from
-  search summaries of those sources; the LIMRA Barometer, Child Care Aware and
-  College Board figures were read from the sources. Recheck before relying on
-  any of them.
-- The reference's videos, quiz images and the calculator's own logic are not
-  rebuilt; the calculator here is the standard arithmetic and shows its sums.
-- The reference's FAQ answers were not read; the answers here are the
-  study's own and should not be taken as theirs.
-- A grid cell is not a place for a form: the four widgets are as large as the
-  largest square in their band, and on a narrow window they leave the grid.
+Observations for whoever reviews this study, recorded without a verdict. Whether the layout suits the page is assessed separately, after every study has been reviewed.
+
+- **Icons.** They are Northwestern Mutual's own drawings, used at the author's request; their licence for reuse is not known.
+- **Skip grids.** They need about 1100px. At phone and tablet width the same content is a plain grid.
+- **Sources.** The SSA, NAR, Brookings, NOLHGA and LIMRA sales figures were confirmed from search summaries of those sources; the LIMRA Barometer, Child Care Aware and College Board figures were read from the sources.
+- **Not rebuilt.** The reference's videos, quiz images and the calculator's own logic; the calculators here use standard arithmetic and show their sums.
+- **FAQ answers.** The reference's answers were not read; the answers here are the study's own.
+- **Forms in cells.** The four widgets take the largest square of their band, and below desktop they stand outside the grid.
+
+## Disclosure
+
+Every page says what it is in three places, all read from
+[`src/study.json`](src/study.json): its title and description, a sticky notice
+at the top, and a disclosure at the very end listing the pages reviewed, what
+is real, what is invented or changed, and where each kind of asset came from.
 
 ## Study tools
 
