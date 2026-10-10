@@ -56,7 +56,9 @@
 }
 
 * { box-sizing: border-box; }
-html { background: var(--ground); color: var(--text); scroll-padding-top: calc(72px + var(--study-banner-h, 0px)); }
+html { background: var(--ground); color: var(--text); }
+/* `html:root` so this outranks the notice's own `:root` rule in study.css. */
+html:root { scroll-padding-top: calc(72px + var(--study-banner-h, 0px)); }
 body { margin: 0; font: 300 19px/1.5 var(--font); letter-spacing: 0.2px; }
 a { color: var(--blue-ink); }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
