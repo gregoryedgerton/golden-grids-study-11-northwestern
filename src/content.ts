@@ -1,14 +1,14 @@
 /**
  * Six pages of northwesternmutual.com — the home page, Life insurance, Term
  * life insurance, Whole life insurance, the Life Insurance Guide and an
- * advisor's profile site — rebuilt as stacked golden grids for GIFcommit, a
+ * advisor's profile site — rebuilt as stacked golden grids for GIFmutual, a
  * fictional mutual insurer, in the register of the reference's Life Insurance Guide.
  *
  * The words are this study's own. They are about the subject (how term and
  * whole life insurance work, what they cover and cost, who they suit), in the
  * order the reference takes them; none is Northwestern Mutual's copy, and
  * none of its ratings, rankings, dividends or prices is carried over:
- * GIFcommit has no rating to quote, so it quotes none. The advisor is
+ * GIFmutual has no rating to quote, so it quotes none. The advisor is
  * invented. Photographs are Unsplash's, credited in each page's footer.
  */
 import type { IconName } from "./icons";
@@ -139,7 +139,7 @@ export const HOME = {
         body: "Your interests come first, and a plan starts from how you think about money, not from a template.",
         long: "People hold debt, skip insurance and under-save for reasons. An advisor who asks about the reason designs a plan the household will actually keep." },
       { label: "Backing", line: "A mutual behind the advice", tone: "sky", icon: "shield",
-        body: "GIFcommit is imagined as a mutual company: owned by its policyowners, answerable to no shareholder.",
+        body: "GIFmutual is imagined as a mutual company: owned by its policyowners, answerable to no shareholder.",
         long: "A mutual insurer's policyowners are its owners. Surplus is retained or returned to them as dividends, which are decided each year and are never guaranteed." },
     ] as Sq[],
   },
@@ -199,11 +199,11 @@ export const HOME = {
   },
 
   faq: {
-    title: "Questions about GIFcommit? We've got answers.",
+    title: "Questions about GIFmutual? We've got answers.",
     items: [
       ["How much can I expect to pay?", "It depends on the product. For life insurance the premium is set by the type of policy, the amount, your age and health, whether you use tobacco, and any riders. Younger, healthier buyers pay less, which is why the question is best asked early. A first meeting with an advisor carries no fee."],
       ["How is a mutual different from other insurers?", "A mutual insurer is owned by its policyowners rather than by shareholders. It can pay dividends from surplus, though they are not guaranteed. The structure does not change what a policy promises; it changes who benefits when the company does better than it expected."],
-      ["What products and services are offered?", "Life insurance (term, whole and universal), disability income, and planning and investment advice. GIFcommit is a fictional company and none of them can be bought here."],
+      ["What products and services are offered?", "Life insurance (term, whole and universal), disability income, and planning and investment advice. GIFmutual is a fictional company and none of them can be bought here."],
       ["How can a financial advisor help me?", "By asking questions you may not have asked yourself, writing down the goals and their costs, and recommending the specific products that close the gaps. A good plan is also revisited when your life changes: a marriage, a child, a house, a new job."],
       ["What is a financial plan, exactly?", "A written statement of goals with dates and amounts, what is already in place to fund them, what is missing, and the steps that close the gap. It covers saving, borrowing, investing and insurance together, because each one affects the others."],
     ] as [string, string][],
@@ -743,7 +743,7 @@ export const ADVISOR = {
   ] as Sq[],
 
   difference: {
-    title: "The GIFcommit difference",
+    title: "The GIFmutual difference",
     lesson: "Four commitments a client can hold an advisor to: a written plan, a yearly review, costs in plain words and the incentives of a mutual.",
     squares: [
       { label: "Plan on paper", line: "1", fitClass: "fit--display fit--num", tone: "sky", icon: "document", body: "Every client receives goals, amounts and dates in writing, and a record of what was recommended and why.", long: "A written plan can be checked against what happens. One that exists only in conversation cannot." },

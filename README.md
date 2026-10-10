@@ -1,17 +1,17 @@
-# Layout study — seven pages of Northwestern Mutual, as GIFcommit
+# Layout study — seven pages of Northwestern Mutual, as GIFmutual
 
 **Live:** [`https://gregoryedgerton.github.io/golden-grids-study-11-northwestern/`](https://gregoryedgerton.github.io/golden-grids-study-11-northwestern/)
 
 An unaffiliated layout study. It rebuilds the structure of seven pages of
 [northwesternmutual.com](https://www.northwesternmutual.com/) as stacked
-golden grids for GIFcommit, a fictional mutual insurer: the home page, [Life
+golden grids for GIFmutual, a fictional mutual insurer: the home page, [Life
 insurance](https://www.northwesternmutual.com/life-insurance/), [Term life
 insurance](https://www.northwesternmutual.com/life-insurance/term-life-insurance/),
 [Whole life insurance](https://www.northwesternmutual.com/life-insurance/whole-life-insurance/),
 the [Life Insurance Guide](https://www.northwesternmutual.com/life-and-money/life-insurance-guide/)
 [an advisor's profile site](https://www.northwesternmutual.com/financial/advisor/mike-lutz/)
 and the [disability insurance calculator](https://www.northwesternmutual.com/disability-insurance/disability-insurance-calculator/).
-GIFcommit is not an insurer. Nothing on it is insurance, advice or an offer,
+GIFmutual is not an insurer. Nothing on it is insurance, advice or an offer,
 no form sends anything, and the advisor, team, address and telephone number
 are invented. The words are the study's own; none of the reference's copy,
 ratings, rankings or prices is carried over. Built with
@@ -126,7 +126,7 @@ one and a band of five or six is dealt into two stacked grids.
 | Band | Grid at 1440 | Measured 390 / 820 / 1440 |
 | --- | --- | --- |
 | Profile | from 1 to 4 · right · cw | 358×597 / 788×473 / 1140×684 |
-| The GIFcommit difference | from 4 to 7 · top · ccw · strip | 358×239+358×179 / 788×488 / 1140×706 |
+| The GIFmutual difference | from 4 to 7 · top · ccw · strip | 358×239+358×179 / 788×488 / 1140×706 |
 | Why I do this work | from 1 to 4 · right · ccw | 358×597 / 788×473 / 1140×684 |
 | The people you will work with | from 3 to 5 · left · cw · strip | 358×573 / 788×493 / 1140×713 |
 | How planning works | from 1 to 4 · right · cw | 358×597 / 788×473 / 1140×684 |

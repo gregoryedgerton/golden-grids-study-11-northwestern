@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "Golden Grids layout study 11: seven pages of Northwestern Mutual (home, life insurance, term, whole life, the guide, an advisor, the disability income calculator) as stacked golden grids, under the GIFcommit brand, in a French caf\u00e9 register.",
+  "description": "Golden Grids layout study 11: seven pages of Northwestern Mutual (home, life insurance, term, whole life, the guide, an advisor, the disability income calculator) as stacked golden grids, under the GIFmutual brand, in a French caf\u00e9 register.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

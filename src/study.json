@@ -1,7 +1,7 @@
 {
   "number": "11",
   "name": "Northwestern Mutual",
-  "notice": "A layout study, not Northwestern Mutual: seven of its pages rebuilt with Golden Grids for GIFcommit, a fictional insurer. Not affiliated with Northwestern Mutual; nothing here is insurance, advice or an offer.",
+  "notice": "A layout study, not Northwestern Mutual: seven of its pages rebuilt with Golden Grids for GIFmutual, a fictional insurer with a parody name. Not affiliated with Northwestern Mutual; nothing here is insurance, advice or an offer.",
   "pages": {
     "advisor": "An advisor's profile",
     "disability-calculator": "Disability income calculator",
@@ -51,7 +51,7 @@
     "The general account of how term and whole life insurance work."
   ],
   "invented": [
-    "GIFcommit as an insurer. It sells nothing, holds no licence and has no ratings, prices or dividends.",
+    "GIFmutual as an insurer. The name is a parody made for this study; it sells nothing, holds no licence and has no ratings, prices or dividends.",
     "The advisor, the team, the office address and the telephone number.",
     "Every sentence, which is the study's own; none of the reference's copy, ratings, rankings or prices is carried over.",
     "The calculators' methods, which are the study's and are printed where they are used. They quote no premium, and no form sends anything."

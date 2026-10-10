@@ -6,7 +6,7 @@ Guidance for agents working in a Golden Grids layout study.
 
 Study 11: seven pages of northwesternmutual.com (home, Life insurance, Term
 life insurance, Whole life insurance, the Life Insurance Guide, an advisor's
-profile site and the disability insurance calculator) rebuilt as stacked golden grids for GIFcommit, a
+profile site and the disability insurance calculator) rebuilt as stacked golden grids for GIFmutual, a
 fictional mutual insurer, in the register of the reference's Life Insurance
 Guide. SEVEN pages (`index`, `life-insurance`, `term-life`, `whole-life`,
 `guide`, `advisor`, `disability-calculator`), Vite entries with plain links. `src/lib/Page.tsx` is the
@@ -151,10 +151,10 @@ README: the smallest line, and that no screen-reader user has tested it.
 
 ## This study's own rules
 
-- GIFcommit is NOT an insurer and the shell says so on every page. Nothing
+- GIFmutual is NOT an insurer and the shell says so on every page. Nothing
   here is insurance, advice or an offer; no form sends anything; the advisor,
   team, address and telephone number are invented (555-01xx). Never quote a
-  price, a rating, a ranking or a dividend for GIFcommit, and never carry over
+  price, a rating, a ranking or a dividend for GIFmutual, and never carry over
   one of Northwestern Mutual's. The only cost figure is LIMRA's accepted
   median for a basic term policy, attributed.
 - The words are the study's own, about how life insurance works. Check any
@@ -261,6 +261,18 @@ Two geometry rules, verified against source, that every band relies on:
   reviewed by people. (Greg, 2026-10-09.)
 - **Favicon**: `public/favicon.svg`, a 32-unit tile with 6-unit corners and one
   letter in the study's colours.
+
+## Brand
+
+- **The study's brand is a parody name**: `GIF` in capitals, then the tail of
+  the reference's name in lower case (GIFbnb, GIFspn, GIFflix, GIFrs, GIFx,
+  GIFbase, GIFmutual, GIFn'now, GIFbell, GIFipedia). Do not use GIFcommit as
+  a service's name; it is only the npm scope of the library.
+- **A play on the reference's premium tier or named service carries the
+  parody name and keeps the alteration**: GIFspn+, GIFbase One, GIFx Premium.
+- Write the name exactly so; never change its case in CSS. The notice in
+  `src/study.json` says it is a parody name, and the disclosure lists it
+  under what is invented. (Greg, 2026-10-09.)
 
 ## API facts, verified against 5.0.0 source
 
